@@ -68,7 +68,7 @@ export function CardMe() {
         >
             <ProfileCard
                 name="Alexandre Rosado"
-                title="Informaticien"
+                title=""
                 handle="Rosado25"
                 status="Recherche de Stage"
                 contactText="Contact Moi"
