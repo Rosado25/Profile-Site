@@ -33,7 +33,7 @@ export function CardWelcome() {
                 Bienvenue
             </motion.h1>
             <motion.p variants={itemVariants}>
-                Je m’appelle Alexandre, développeur passionné et curieux, toujours à la recherche de nouvelles idées à créer et à améliorer.
+            Je m’appelle Alexandre, développeur passionné et curieux, toujours à la recherche de nouvelles idées à créer et à améliorer.
                 J’aime construire des expériences simples, propres et efficaces, que ce soit en front-end, en design ou dans l’exploration de nouvelles technologies.
                 Mon objectif est d’allier créativité et logique pour donner vie à des projets modernes, élégants et utiles.
             </motion.p>
