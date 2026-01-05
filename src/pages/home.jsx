@@ -27,16 +27,96 @@ export function CardWelcome() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className='card'
+            className='card relative overflow-hidden'
         >
-            <motion.h1 variants={itemVariants}>
-                Bienvenue
-            </motion.h1>
-            <motion.p variants={itemVariants}>
-            Je m’appelle Alexandre, développeur passionné et curieux, toujours à la recherche de nouvelles idées à créer et à améliorer.
-                J’aime construire des expériences simples, propres et efficaces, que ce soit en front-end, en design ou dans l’exploration de nouvelles technologies.
-                Mon objectif est d’allier créativité et logique pour donner vie à des projets modernes, élégants et utiles.
-            </motion.p>
+
+            <div className="relative z-10 h-full flex flex-col justify-between p-8 md:p-12">
+    
+                {/* Títulos principais */}
+                <motion.div 
+                    variants={itemVariants}
+                    className="space-y-2"
+                >
+                    <motion.h2 
+                        className="text-6xl md:text-7xl lg:text-8xl font-bold"
+                        variants={itemVariants}
+                    >
+                        <motion.span 
+                            className="block text-white"
+                            whileHover={{ x: 10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            Créer.
+                        </motion.span>
+                        <br/>
+                        <motion.span 
+                            className="block text-white"
+                            whileHover={{ x: 10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            Comprendre.
+                        </motion.span>
+                        <br/>
+                        <motion.span 
+                            className="block text-white"
+                            whileHover={{ x: 10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            Simplifier.
+                        </motion.span>
+                        <br/>
+                        <br/>
+                     
+                    </motion.h2>
+                </motion.div>
+
+                {/* Estatísticas / Tech stack */}
+                <motion.div 
+                    variants={itemVariants}
+                    className="grid grid-cols-2 md:grid-cols-4 gap-6 my-8"
+                >
+                    <motion.div 
+                        className="text-center"
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold block text-white">3+</div>
+                        <div className="text-sm text-gray-400 mt-1">Années d'expérience</div>
+                    </motion.div>
+                    
+                    <motion.div 
+                        className="text-center"
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold block text-white">10+</div>
+                        <div className="text-sm text-gray-400 mt-1">Projets réalisés</div>
+                    </motion.div>
+                    
+                    <motion.div 
+                        className="text-center"
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold block text-white">30+</div>
+                        <div className="text-sm text-gray-400 mt-1">Technologies maitrises</div>
+                    </motion.div>
+                    
+                    <motion.div 
+                        className="text-center"
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold block text-white">100%</div>
+                        <div className="text-sm text-gray-400 mt-1">Engagement</div>
+                    </motion.div>
+                </motion.div>
+
+                {/* Descrição */}
+                <motion.div 
+                    variants={itemVariants}
+                    className="space-y-4"
+                >
+                    
+                </motion.div>
+
+            </div>
         </motion.div>
     );
 }
