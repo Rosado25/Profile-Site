@@ -40,13 +40,13 @@ export default function Navbar() {
                 animate="visible"
             >
                 <motion.a href="/" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
-                    Home
+                    Accuille
                 </motion.a>
                 <motion.a href="/skills" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
-                    Skills
+                    Competences
                 </motion.a>
                 <motion.a href="/projects" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
-                    Projects
+                    Projets
                 </motion.a>
                 <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
                     Contact
