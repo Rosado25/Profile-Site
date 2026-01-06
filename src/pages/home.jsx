@@ -142,10 +142,10 @@ export function CardMe() {
                 handle="Rosado25"
                 status="Recherche de Stage"
                 contactText="Contact Moi"
-                avatarUrl="src/data/alex.png"
-                grainUrl="src/data/grain.webp"
-                iconUrl="src/data/iconpattern.png"
-                miniAvatarUrl="src/data/mini.png"
+                avatarUrl="/alex.png"
+                grainUrl="/grain.webp"
+                iconUrl="/iconpattern.png"
+                miniAvatarUrl="/mini.png"
                 behindGlowEnabled={true}
                 showUserInfo={true}
                 enableTilt={true}
