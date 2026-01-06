@@ -146,7 +146,7 @@ export function CardMe() {
                 grainUrl="/grain.webp"
                 iconUrl="/iconpattern.png"
                 miniAvatarUrl="/mini.png"
-                behindGlowEnabled={true}
+                behindGlowEnabled={false}
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
