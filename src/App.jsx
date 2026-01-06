@@ -10,7 +10,7 @@ function App() {
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor={true}
-        parallaxOn={true}
+        parallaxOn={false}
       />
       <Navbar />
       <main>

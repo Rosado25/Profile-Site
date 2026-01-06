@@ -87,8 +87,18 @@ const ProfileCardComponent = ({
       for (const [k, v] of Object.entries(properties)) wrap.style.setProperty(k, v);
     };
 
+    let lastUpdate = 0;
+    const FPS_LIMIT = 32; // atualiza 30 vezes por segundo
+
     const step = ts => {
       if (!running) return;
+
+      if (ts - lastUpdate < 1000 / FPS_LIMIT) {
+        rafId = requestAnimationFrame(step);
+        return;
+      }
+      lastUpdate = ts;
+
       if (lastTs === 0) lastTs = ts;
       const dt = (ts - lastTs) / 1000;
       lastTs = ts;
@@ -114,6 +124,7 @@ const ProfileCardComponent = ({
         }
       }
     };
+
 
     const start = () => {
       if (running) return;
