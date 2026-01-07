@@ -9,7 +9,7 @@ const ArcProjectsCarousel = () => {
         {
             id: 1,
             title: 'Coastline',
-            description: 'Projeto de fotografia costeira',
+            description: 'Projeto de fotografia',
             tags: ['Fotografia', 'Natureza']
         },
         {
@@ -124,48 +124,29 @@ const ArcProjectsCarousel = () => {
                             {projects.map((project, index) => (
                                 <div
                                     key={project.id}
-                                    className="card shrink-0 w-80 h-96 overflow-hidden cursor-pointer"
+                                    className="card shrink-0 w-80 h-100 overflow-hidden cursor-pointer"
                                     style={getCardStyle(index)}
                                 >
                                     <div
-                                        className="relative h-48"
-                                        style={{
-                                            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                            position: 'relative',
-                                            overflow: 'hidden'
-                                        }}
+                                        className="relative overflow-hidden bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] h-48 rounded-2xl"
                                     >
-                                        <div
-                                            style={{
-                                                position: 'absolute',
-                                                inset: 0,
-                                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), transparent)',
-                                                opacity: 0.3
-                                            }}
-                                        ></div>
                                         <div className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-15">
                                             {project.title.charAt(0)}
                                         </div>
                                     </div>
-
+                                    <br />
                                     <div className="p-6">
                                         <h3 className="text-2xl font-bold text-white mb-2">
                                             {project.title}
                                         </h3>
-                                        <p className="text-gray-400 mb-4">
+                                        <p className="text-gray-400">
                                             {project.description}
                                         </p>
                                         <div className="flex flex-wrap gap-2">
                                             {project.tags.map((tag, i) => (
                                                 <span
                                                     key={i}
-                                                    className="px-3 py-1 text-sm rounded-full"
-                                                    style={{
-                                                        background: 'rgba(82, 39, 255, 0.15)',
-                                                        color: 'rgba(200, 180, 255, 0.9)',
-                                                        border: '1px solid rgba(82, 39, 255, 0.3)',
-                                                        transition: 'all 0.3s ease'
-                                                    }}
+                                                    className="inline-block px-4 py-2 text-sm leading-normal rounded-2xl bg-[rgba(82,39,255,0.15)] text-[rgba(200,180,255,0.9)] border border-[rgba(82,39,255,0.3)] before:content-['\00a0'] after:content-['\00a0']"
                                                 >
                                                     {tag}
                                                 </span>
