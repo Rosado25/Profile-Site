@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-primary: #060010;
     --bg-secondary: #1a1a1a;
@@ -170,7 +174,7 @@ main {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
     background-color: var(--bg-primary);
     max-width: 100%;
     margin: 0 auto;

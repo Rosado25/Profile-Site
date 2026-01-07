@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <main>
         {/* Seção com DotGrid */}
-        <section className="dotgrid-section">
+        <section id="accuille" className="dotgrid-section">
           <DotGrid
             dotSize={5}
             gap={13}
@@ -35,9 +35,11 @@ function App() {
         </section>
 
         {/* Resto da página com fundo simples */}
-        <section className="simple-section bg-gradient-to-b from-black via-gray-800 to-gray-900 py-20">
+        <section className="simple-section bg-linear-to-b from-black via-gray-800 to-gray-900 py-20">
           {/* Conteúdo adicional aqui */}
-          <ArcProjectsCarousel />
+          <section id="projects">
+            <ArcProjectsCarousel />
+          </section>
         </section>
       </main>
     </>

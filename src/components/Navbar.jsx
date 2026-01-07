@@ -39,13 +39,23 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
             >
-                <motion.a href="/" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
+                <motion.a href="#accuille" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
                     Accuille
                 </motion.a>
-                <motion.a href="/skills" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
+                <motion.a href="#skills" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
                     Competences
                 </motion.a>
-                <motion.a href="/projects" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
+                <motion.a href="#projects" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById("projects");
+                        if (element) {
+                            const offset = -190; // altura em px para subir um pouco
+                            const top = element.getBoundingClientRect().top + window.scrollY + offset;
+                            window.scrollTo({ top, behavior: "smooth" });
+                        }
+                    }}
+                >
                     Projets
                 </motion.a>
                 <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
