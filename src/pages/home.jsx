@@ -77,7 +77,7 @@ export function CardWelcome() {
                         className="text-center"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="text-3xl md:text-4xl font-bold block text-white">10+</div>
+                        <div className="text-3xl md:text-4xl font-bold block text-white">7+</div>
                         <div className="text-sm text-gray-400 mt-1">Projets réalisés</div>
                     </motion.div>
 

@@ -8,45 +8,45 @@ const ArcProjectsCarousel = () => {
     const projects = [
         {
             id: 1,
-            title: 'Coastline',
-            description: 'Projeto de fotografia',
-            tags: ['Fotografia', 'Natureza']
+            title: 'Site CV',
+            description: 'Projet site web personnel',
+            tags: ['Web', 'Personnel']
         },
         {
             id: 2,
-            title: 'Palm Trees',
-            description: 'Série fotográfica tropical',
-            tags: ['Fotografia', 'Tropical']
+            title: 'Smartbites',
+            description: 'App de reccetes et courses',
+            tags: ['Android', 'Groupe']
         },
         {
             id: 3,
-            title: 'Bridge',
-            description: 'Arquitetura estrutural',
-            tags: ['Arquitetura', 'Engenharia']
+            title: 'Gestion d\'équipe',
+            description: 'Site avec API personnel',
+            tags: ['Web', 'Binome']
         },
         {
             id: 4,
-            title: 'Desk Setup',
-            description: 'Workspace minimalista',
-            tags: ['Design', 'Workspace']
+            title: 'Echoo Messagerie',
+            description: 'Site avec Ajax',
+            tags: ['Web', 'Binome']
         },
         {
             id: 5,
-            title: 'Waterfall',
-            description: 'Paisagens naturais',
-            tags: ['Natureza', 'Paisagem']
+            title: 'BlumBat',
+            description: 'App de gestion immobilière',
+            tags: ['Java', 'Groupe']
         },
         {
             id: 6,
-            title: 'Mountain',
-            description: 'Aventuras em altitude',
-            tags: ['Natureza', 'Aventura']
+            title: 'Validateur  d\'IP',
+            description: 'Validateur de Réseau',
+            tags: ['C', 'Binome']
         },
         {
             id: 7,
-            title: 'Urban',
-            description: 'Fotografia urbana',
-            tags: ['Cidade', 'Arquitetura']
+            title: 'App Statistiques',
+            description: 'Exploitation des données',
+            tags: ['Apex', 'Personnel']
         }
     ];
 
