@@ -212,7 +212,6 @@ p {
 .card {
     background: rgba(39, 31, 54, 0.45);
     border-radius: 24px;
-
     padding: 2rem;
     transition: var(--transition);
     margin-bottom: 0rem;

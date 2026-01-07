@@ -97,56 +97,55 @@ const ArcProjectsCarousel = () => {
     return (
         <div className="w-full min-h-screen">
             <motion.div
+                variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                variants={containerVariants}
                 className="w-full"
             >
                 <motion.h2
                     variants={cardVariants}
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-16"
+                    className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-16 pt-12"
                 >
                     Projets
                 </motion.h2>
 
                 <div className="relative w-full overflow-visible py-40">
                     <div style={{ perspective: '2000px' }}>
-                        <motion.div
+                        <div
                             ref={containerRef}
                             onScroll={handleScroll}
-                            variants={containerVariants}
-                            className="flex gap-8 overflow-x-auto overflow-y-visible px-8 scrollbar-hide scroll-smooth min-h-[600px]"
+                            className="flex gap-8 overflow-x-auto overflow-y-visible px-8 scroll-smooth min-h-[600px]"
                             style={{
+                                WebkitOverflowScrolling: 'touch',
                                 scrollbarWidth: 'none',
-                                msOverflowStyle: 'none',
-                                WebkitOverflowScrolling: 'touch'
+                                msOverflowStyle: 'none'
                             }}
                         >
                             {projects.map((project, index) => (
-                                <motion.div
+                                <div
                                     key={project.id}
-                                    className="shrink-0 w-80 h-96 rounded-3xl overflow-hidden cursor-pointer transition-all duration-300"
-                                    style={{
-                                        ...getCardStyle(index),
-                                        background: 'rgba(39, 31, 54, 0.45)',
-                                        backdropFilter: 'blur(20px) saturate(200%)',
-                                        WebkitBackdropFilter: 'blur(20px) saturate(200%)',
-                                        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.boxShadow = '0 12px 40px 0 rgba(82, 39, 255, 0.2)';
-                                        e.currentTarget.style.borderColor = 'rgba(82, 39, 255, 0.4)';
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.37)';
-                                        e.currentTarget.style.borderColor = 'transparent';
-                                    }}
+                                    className="card shrink-0 w-80 h-96 overflow-hidden cursor-pointer"
+                                    style={getCardStyle(index)}
                                 >
-                                    <div className="relative h-48 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 overflow-hidden">
+                                    <div
+                                        className="relative h-48"
+                                        style={{
+                                            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                            position: 'relative',
+                                            overflow: 'hidden'
+                                        }}
+                                    >
+                                        <div
+                                            style={{
+                                                position: 'absolute',
+                                                inset: 0,
+                                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), transparent)',
+                                                opacity: 0.3
+                                            }}
+                                        ></div>
                                         <div className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-15">
                                             {project.title.charAt(0)}
                                         </div>
-                                        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-30"></div>
                                     </div>
 
                                     <div className="p-6">
@@ -160,11 +159,12 @@ const ArcProjectsCarousel = () => {
                                             {project.tags.map((tag, i) => (
                                                 <span
                                                     key={i}
-                                                    className="px-3 py-1 text-sm rounded-full transition-all duration-300"
+                                                    className="px-3 py-1 text-sm rounded-full"
                                                     style={{
                                                         background: 'rgba(82, 39, 255, 0.15)',
                                                         color: 'rgba(200, 180, 255, 0.9)',
-                                                        border: '1px solid rgba(82, 39, 255, 0.3)'
+                                                        border: '1px solid rgba(82, 39, 255, 0.3)',
+                                                        transition: 'all 0.3s ease'
                                                     }}
                                                 >
                                                     {tag}
@@ -172,21 +172,15 @@ const ArcProjectsCarousel = () => {
                                             ))}
                                         </div>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
-                        </motion.div>
-
-                        <style jsx>{`
-                            .scrollbar-hide::-webkit-scrollbar {
-                                display: none;
-                            }
-                        `}</style>
+                        </div>
                     </div>
                 </div>
 
                 <motion.div
                     variants={cardVariants}
-                    className="text-center text-gray-400 text-sm mt-8"
+                    className="text-center text-gray-400 text-sm mt-8 pb-12"
                 >
                     Faites glisser pour naviguer entre les projets
                 </motion.div>
