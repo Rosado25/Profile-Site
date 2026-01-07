@@ -35,7 +35,7 @@ function App() {
         </section>
 
         {/* Resto da página com fundo simples */}
-        <section className="simple-section bg-linear-to-b from-black via-gray-800 to-gray-900 py-20">
+        <section className="simple-section py-20">
           {/* Conteúdo adicional aqui */}
           <section id="projects">
             <ArcProjectsCarousel />
