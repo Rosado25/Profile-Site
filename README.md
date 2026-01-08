@@ -23,7 +23,7 @@ If you want to clone and run this project locally for development:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Rosado25/Profile-Site.git
    cd cv-portfolio
    ```
 2. Install dependencies:
