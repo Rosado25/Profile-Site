@@ -1,4 +1,4 @@
-import { motion, rgba } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ProfileCard from '../components/ProfileCard.jsx';
 
 export function CardWelcome() {
