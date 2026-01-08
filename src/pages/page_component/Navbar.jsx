@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import GlassSurface from './GlassSurface.jsx';
+import GlassSurface from '../../components/GlassSurface.jsx';
 
 export default function Navbar() {
     const navVariants = {
@@ -50,7 +50,7 @@ export default function Navbar() {
                         e.preventDefault();
                         const element = document.getElementById("projects");
                         if (element) {
-                            const offset = -190; // altura em px para subir um pouco
+                            const offset = -177; // altura em px para subir um pouco
                             const top = element.getBoundingClientRect().top + window.scrollY + offset;
                             window.scrollTo({ top, behavior: "smooth" });
                         }

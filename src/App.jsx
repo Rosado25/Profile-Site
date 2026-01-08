@@ -1,8 +1,8 @@
-import Navbar from './components/Navbar.jsx';
+import Navbar from './pages/page_component/Navbar.jsx';
 import { CardWelcome, CardMe } from './pages/home.jsx';
 import DotGrid from './components/DotGrid.jsx';
 import TargetCursor from './components/TargetCursor.jsx';
-import ArcProjectsCarousel from './components/Carousell.jsx';
+import { ProjetsCarousell } from './pages/projets.jsx';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         <section className="simple-section py-20">
           {/* Conteúdo adicional aqui */}
           <section id="projects">
-            <ArcProjectsCarousel />
+            <ProjetsCarousell />
           </section>
         </section>
       </main>

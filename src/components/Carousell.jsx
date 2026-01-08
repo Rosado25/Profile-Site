@@ -1,74 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
 
-const ArcProjectsCarousel = () => {
+const ArcProjectsCarousel = ({ items }) => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const containerRef = useRef(null);
-
-    const projects = [
-        {
-            id: 1,
-            title: 'Site CV',
-            description: 'Projet site web personnel',
-            tags: ['Web', 'Personnel']
-        },
-        {
-            id: 2,
-            title: 'Smartbites',
-            description: 'App de reccetes et courses',
-            tags: ['Android', 'Groupe']
-        },
-        {
-            id: 3,
-            title: 'Gestion d\'équipe',
-            description: 'Site avec API personnel',
-            tags: ['Web', 'Binome']
-        },
-        {
-            id: 4,
-            title: 'Echoo Messagerie',
-            description: 'Site avec Ajax',
-            tags: ['Web', 'Binome']
-        },
-        {
-            id: 5,
-            title: 'BlumBat',
-            description: 'App de gestion immobilière',
-            tags: ['Java', 'Groupe']
-        },
-        {
-            id: 6,
-            title: 'Validateur  d\'IP',
-            description: 'Validateur de Réseau',
-            tags: ['C', 'Binome']
-        },
-        {
-            id: 7,
-            title: 'App Statistiques',
-            description: 'Exploitation des données',
-            tags: ['Apex', 'Personnel']
-        }
-    ];
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                staggerChildren: 0.1
-            }
-        }
-    };
-
-    const cardVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, ease: 'easeOut' }
-        }
-    };
 
     const handleScroll = (e) => {
         const container = e.target;
@@ -95,77 +29,56 @@ const ArcProjectsCarousel = () => {
     };
 
     return (
-        <div className="w-full min-h-screen">
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="w-full"
-            >
-                <motion.h2
-                    variants={cardVariants}
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-16 pt-12"
-                >
-                    Projets
-                </motion.h2>
-
-                <div className="relative w-full overflow-visible py-40">
-                    <div style={{ perspective: '2000px' }}>
-                        <div
-                            ref={containerRef}
-                            onScroll={handleScroll}
-                            className="flex gap-8 overflow-x-auto overflow-y-visible px-8 scroll-smooth min-h-[600px]"
-                            style={{
-                                WebkitOverflowScrolling: 'touch',
-                                scrollbarWidth: 'none',
-                                msOverflowStyle: 'none'
-                            }}
-                        >
-                            {projects.map((project, index) => (
+        <div className="w-full">
+            <div className="relative w-full overflow-visible py-40">
+                <div style={{ perspective: '2000px' }}>
+                    <div
+                        ref={containerRef}
+                        onScroll={handleScroll}
+                        className="flex gap-8 overflow-x-auto overflow-y-visible px-8 scroll-smooth min-h-[600px]"
+                        style={{
+                            WebkitOverflowScrolling: 'touch',
+                            scrollbarWidth: 'none',
+                            msOverflowStyle: 'none'
+                        }}
+                    >
+                        {items.map((project, index) => (
+                            <div
+                                key={project.id}
+                                className="card shrink-0 w-80 h-100 overflow-hidden cursor-pointer"
+                                style={getCardStyle(index)}
+                            >
                                 <div
-                                    key={project.id}
-                                    className="card shrink-0 w-80 h-100 overflow-hidden cursor-pointer"
-                                    style={getCardStyle(index)}
+                                    className="relative overflow-hidden bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] h-48 rounded-2xl"
                                 >
-                                    <div
-                                        className="relative overflow-hidden bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] h-48 rounded-2xl"
-                                    >
-                                        <div className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-15">
-                                            {project.title.charAt(0)}
-                                        </div>
-                                    </div>
-                                    <br />
-                                    <div className="p-6">
-                                        <h3 className="text-2xl font-bold text-white mb-2">
-                                            {project.title}
-                                        </h3>
-                                        <p className="text-gray-400">
-                                            {project.description}
-                                        </p>
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tags.map((tag, i) => (
-                                                <span
-                                                    key={i}
-                                                    className="inline-block px-4 py-2 text-sm leading-normal rounded-2xl bg-[rgba(82,39,255,0.15)] text-[rgba(200,180,255,0.9)] border border-[rgba(82,39,255,0.3)] before:content-['\00a0'] after:content-['\00a0']"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    <div className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-15">
+                                        {project.title.charAt(0)}
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                                <br />
+                                <div className="p-6">
+                                    <h3 className="text-2xl font-bold text-white mb-2">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-gray-400">
+                                        {project.description}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map((tag, i) => (
+                                            <span
+                                                key={i}
+                                                className="inline-block px-4 py-2 text-sm leading-normal rounded-2xl bg-[rgba(82,39,255,0.15)] text-[rgba(200,180,255,0.9)] border border-[rgba(82,39,255,0.3)] before:content-['\00a0'] after:content-['\00a0']"
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-
-                <motion.div
-                    variants={cardVariants}
-                    className="text-center text-gray-400 text-sm mt-8 pb-12"
-                >
-                    Faites glisser pour naviguer entre les projets
-                </motion.div>
-            </motion.div>
+            </div>
         </div>
     );
 };
