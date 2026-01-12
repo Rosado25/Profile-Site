@@ -51,9 +51,9 @@ export function CardWelcome() {
                         <br />
                         <div className="flex flex-col items-center gap-4">
                             <img src="https://skillicons.dev/icons?i=python,java,js,ts,dart,php,c,html,css&perline=9" />
-                            <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,kubernetes,linux,bash,arduino&perline=8" />
+                            <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,kubernetes,linux,bash,arduino,postman&perline=9" />
                             <img src="https://skillicons.dev/icons?i=react,flutter,laravel,spring,nodejs,express,jquery&perline=7" />
-                            <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgres,redis&perline=4" />
+                            <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgres,redis,sqlite&perline=5" />
                         </div>
                         <br />
 
