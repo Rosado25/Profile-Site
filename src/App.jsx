@@ -3,6 +3,7 @@ import { CardWelcome, CardMe } from './pages/home.jsx';
 import DotGrid from './components/DotGrid.jsx';
 import TargetCursor from './components/TargetCursor.jsx';
 import { ProjetsCarousell } from './pages/projets.jsx';
+import { CompetencesCards } from './pages/competences.jsx';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
           {/* Conteúdo adicional aqui */}
           <section id="projects">
             <ProjetsCarousell />
+          </section>
+          <section id="competences">
+            <CompetencesCards />
           </section>
         </section>
       </main>

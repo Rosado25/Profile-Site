@@ -18,7 +18,7 @@ html {
     --text-primary: #f8f9fa;
     --text-secondary: #8e9296;
     --accent: #5227ff5a;
-    --border: oklch(0.922 0 0);
+    --border: #e5e5e5;
     --hover: #f1f3f5;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --radius: 0.625rem;
@@ -178,6 +178,35 @@ main {
     background-color: var(--bg-primary);
     max-width: 100%;
     margin: 0 auto;
+    background-image: url(back.webp);
+    background-size: cover;
+}
+
+.compsec {
+    margin-top: 10rem;
+}
+
+.cardcompetences {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background: rgba(39, 31, 54, 0.45);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: var(--transition);
+    margin-bottom: 0rem;
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(82, 39, 255, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
 }
 
 /* Typography */
@@ -212,23 +241,6 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Cards e seções */
-.card {
-    background: rgba(39, 31, 54, 0.45);
-    border-radius: 24px;
-    padding: 2rem;
-    transition: var(--transition);
-    margin-bottom: 0rem;
-    backdrop-filter: blur(20px) saturate(200%);
-    -webkit-backdrop-filter: blur(20px) saturate(200%);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(82, 39, 255, 0.4);
-    box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
-}
 
 /* Botões */
 button,
