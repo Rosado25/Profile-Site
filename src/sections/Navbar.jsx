@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import GlassSurface from '../../components/GlassSurface.jsx';
+import GlassSurface from '../components/GlassSurface.jsx';
 
 export default function Navbar() {
     const navVariants = {

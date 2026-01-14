@@ -1,9 +1,9 @@
-import Navbar from './pages/page_component/Navbar.jsx';
-import { CardWelcome, CardMe } from './pages/home.jsx';
+import Navbar from './sections/Navbar.jsx';
+import { CardWelcome, CardMe } from './sections/home.jsx';
 import DotGrid from './components/DotGrid.jsx';
 import TargetCursor from './components/TargetCursor.jsx';
-import { ProjetsCarousell } from './pages/projets.jsx';
-import { CompetencesCards } from './pages/competences.jsx';
+import { ProjetsCarousell } from './sections/projets.jsx';
+import { CompetencesCards } from './sections/competences.jsx';
 
 
 function App() {
