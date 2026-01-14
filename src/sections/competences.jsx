@@ -1,10 +1,17 @@
 import CompetenceCard from "../components/CardCompetence.jsx";
 import { motion } from 'framer-motion';
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { IoPeopleOutline } from "react-icons/io5";
+import { MdSpeed } from "react-icons/md";
+import { LuNewspaper } from "react-icons/lu";
+import { LuBoxes } from "react-icons/lu";
+import { FaLaptopCode } from "react-icons/fa";
+
 
 const competences = [
     {
         id: 1,
-        icon: '🟥',
+        icon: <FaLaptopCode size={50} />,
         title: 'RÉALISER',
         subtitle: 'Développement logiciel',
         skills: [
@@ -17,7 +24,7 @@ const competences = [
     },
     {
         id: 2,
-        icon: '🟧',
+        icon: <MdSpeed size={50} />,
         title: 'OPTIMISER',
         subtitle: 'Algorithmique et performance',
         skills: [
@@ -30,7 +37,7 @@ const competences = [
     },
     {
         id: 3,
-        icon: '🟨',
+        icon: <MdOutlineAdminPanelSettings size={50} />,
         title: 'ADMINISTRER',
         subtitle: 'Systèmes & DevOps',
         skills: [
@@ -43,7 +50,7 @@ const competences = [
     },
     {
         id: 4,
-        icon: '🟩',
+        icon: <LuBoxes size={50} />,
         title: 'GÉRER',
         subtitle: 'Back-end & données',
         skills: [
@@ -56,7 +63,7 @@ const competences = [
     },
     {
         id: 5,
-        icon: '🟦',
+        icon: <LuNewspaper size={50} />,
         title: 'CONDUIRE',
         subtitle: 'Produit & projet',
         skills: [
@@ -69,7 +76,7 @@ const competences = [
     },
     {
         id: 6,
-        icon: '⬛',
+        icon: <IoPeopleOutline size={50} />,
         title: 'COLLABORER',
         subtitle: 'Équipe & leadership',
         skills: [
@@ -100,7 +107,7 @@ export function CompetencesCards() {
                 </motion.div>
 
                 {/* Grid de compétences - 2 colonnes pour densité optimale */}
-                <div className=" cardcompetences grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl">
+                <div className=" cardcompetences grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl">
                     {competences.map((comp, index) => (
                         <CompetenceCard
                             key={comp.id}

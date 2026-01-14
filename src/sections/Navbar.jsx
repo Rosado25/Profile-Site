@@ -42,9 +42,6 @@ export default function Navbar() {
                 <motion.a href="#accuille" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
                     Accuille
                 </motion.a>
-                <motion.a href="#competences" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
-                    Compétences
-                </motion.a>
                 <motion.a href="#projects" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target"
                     onClick={(e) => {
                         e.preventDefault();
@@ -57,6 +54,19 @@ export default function Navbar() {
                     }}
                 >
                     Projets
+                </motion.a>
+                <motion.a href="#competences" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById("competences");
+                        if (element) {
+                            const offset = -150; // altura em px para subir um pouco
+                            const top = element.getBoundingClientRect().top + window.scrollY + offset;
+                            window.scrollTo({ top, behavior: "smooth" });
+                        }
+                    }}
+                >
+                    Compétences
                 </motion.a>
                 <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
                     Contact
