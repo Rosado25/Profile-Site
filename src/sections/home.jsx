@@ -137,7 +137,7 @@ export function CardMe() {
                 avatarUrl="/alex.webp"
                 grainUrl="/grain.webp"
                 iconUrl="/iconpattern.webp"
-                miniAvatarUrl="/mini.webp"
+                miniAvatarUrl="/256-logoMini.webp"
                 behindGlowEnabled={false}
                 showUserInfo={true}
                 enableTilt={true}
