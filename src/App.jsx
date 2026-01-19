@@ -37,10 +37,11 @@ function App() {
 
         {/* Resto da página com fundo simples */}
         <section className="simple-section py-20">
-          {/* Conteúdo adicional aqui */}
+          {/* Projetos*/}
           <section id="projects">
             <ProjetsCarousell />
           </section>
+          {/* Competencias */}
           <section id="competences">
             <CompetencesCards />
           </section>
