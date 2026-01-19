@@ -18,7 +18,7 @@ const CompetenceCard = ({ competence, index }) => {
                 <div className="cardcomp">
 
                     {/* Header */}
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center gap-4 mb-4">
                         <div >{competence.icon}</div>
                         <div>
                             <h3 className="text-xl font-bold text-white">{competence.title}</h3>
