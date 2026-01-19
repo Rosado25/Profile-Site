@@ -1,12 +1,55 @@
 import React, { useState, useRef } from 'react';
 
 const ArcProjectsCarousel = ({ items }) => {
-    const [scrollPosition, setScrollPosition] = useState(0);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
     const containerRef = useRef(null);
+    const animationFrameRef = useRef(null);
 
-    const handleScroll = (e) => {
-        const container = e.target;
-        setScrollPosition(container.scrollLeft);
+    const updateCardPositions = () => {
+        if (containerRef.current) {
+            containerRef.current.querySelectorAll('.card').forEach((card, index) => {
+                const style = getCardStyle(index);
+                card.style.transform = style.transform;
+            });
+        }
+    };
+
+    const handleScroll = () => {
+        if (animationFrameRef.current) {
+            cancelAnimationFrame(animationFrameRef.current);
+        }
+        animationFrameRef.current = requestAnimationFrame(updateCardPositions);
+    };
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - containerRef.current.offsetLeft);
+        setScrollLeft(containerRef.current.scrollLeft);
+        containerRef.current.style.cursor = 'grabbing';
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+        if (containerRef.current) {
+            containerRef.current.style.cursor = 'grab';
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+        if (containerRef.current) {
+            containerRef.current.style.cursor = 'grab';
+        }
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - containerRef.current.offsetLeft;
+        const walk = (x - startX) * 2;
+        containerRef.current.scrollLeft = scrollLeft - walk;
     };
 
     const getCardStyle = (index) => {
@@ -24,7 +67,6 @@ const ArcProjectsCarousel = ({ items }) => {
 
         return {
             transform: `translateY(${translateY}px) scale(${scale}) rotateY(${rotateY}deg)`,
-            transition: 'transform 0.3s ease-out',
         };
     };
 
@@ -35,18 +77,28 @@ const ArcProjectsCarousel = ({ items }) => {
                     <div
                         ref={containerRef}
                         onScroll={handleScroll}
-                        className="flex gap-8 overflow-x-auto overflow-y-visible px-8 scroll-smooth min-h-[600px]"
+                        onMouseDown={handleMouseDown}
+                        onMouseLeave={handleMouseLeave}
+                        onMouseUp={handleMouseUp}
+                        onMouseMove={handleMouseMove}
+                        className="flex gap-8 overflow-x-auto overflow-y-visible px-8 min-h-[600px]"
                         style={{
                             WebkitOverflowScrolling: 'touch',
                             scrollbarWidth: 'none',
-                            msOverflowStyle: 'none'
+                            msOverflowStyle: 'none',
+                            cursor: 'grab',
+                            userSelect: 'none',
+                            scrollBehavior: isDragging ? 'auto' : 'smooth'
                         }}
                     >
                         {items.map((project, index) => (
                             <div
                                 key={project.id}
                                 className="card shrink-0 w-80 h-100 overflow-hidden cursor-pointer"
-                                style={getCardStyle(index)}
+                                style={{
+                                    ...getCardStyle(index),
+                                    transition: isDragging ? 'none' : 'transform 0.3s ease-out'
+                                }}
                             >
                                 <div
                                     className="relative overflow-hidden bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] h-48 rounded-2xl"
