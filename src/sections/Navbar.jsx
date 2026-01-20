@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import GlassSurface from '../components/GlassSurface.jsx';
+import MotionLink from "../components/MotionLink";
 
 export default function Navbar() {
     const navVariants = {
@@ -39,35 +40,15 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
             >
-                <motion.a href="#accuille" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
-                    Accuille
-                </motion.a>
-                <motion.a href="#projects" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.getElementById("projects");
-                        if (element) {
-                            const offset = -177; // altura em px para subir um pouco
-                            const top = element.getBoundingClientRect().top + window.scrollY + offset;
-                            window.scrollTo({ top, behavior: "smooth" });
-                        }
-                    }}
-                >
+                <MotionLink toId="accueille" >
+                    Accueille
+                </MotionLink>
+                <MotionLink toId="projects" >
                     Projets
-                </motion.a>
-                <motion.a href="#competences" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.getElementById("competences");
-                        if (element) {
-                            const offset = -150; // altura em px para subir um pouco
-                            const top = element.getBoundingClientRect().top + window.scrollY + offset;
-                            window.scrollTo({ top, behavior: "smooth" });
-                        }
-                    }}
-                >
+                </MotionLink>
+                <MotionLink toId="competences" >
                     Compétences
-                </motion.a>
+                </MotionLink>
                 <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
                     Contact
                 </motion.a>
