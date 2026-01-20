@@ -4,7 +4,6 @@ import DotGrid from "../components/DotGrid.jsx";
 import TargetCursor from "../components/TargetCursor.jsx";
 import { ProjetsCarousell } from "../sections/projets.jsx";
 import { CompetencesCards } from "../sections/competences.jsx";
-
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
