@@ -50,11 +50,12 @@ export function CardWelcome() {
                         </motion.span>
                         <br />
                         <div className="flex flex-col items-center gap-4">
-                            <img src="https://skillicons.dev/icons?i=python,java,js,ts,dart,php,c,html,css&perline=9" />
-                            <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,kubernetes,linux,bash,arduino,postman&perline=9" />
-                            <img src="https://skillicons.dev/icons?i=react,flutter,laravel,spring,nodejs,express,jquery&perline=7" />
-                            <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgres,redis,sqlite&perline=5" />
+                            <img src="https://go-skill-icons.vercel.app/api/icons?i=c,java,js,html,css,jquery,mongodb,mysql,androidstudio,arduino,vagrant,api&perline=12" />
+                            <img src="https://go-skill-icons.vercel.app/api/icons?i=php,py,dart,react,tailwind,vite,postgres,redis,bash,debian,virtualbox,plsql&perline=12" />
+                            <img src="https://go-skill-icons.vercel.app/api/icons?i=flutter,sqlite,supabase,eclipse,json,git,github,gitlab,gtk,docker,kubernetes,junit&perline=12" />
+                            <img src="https://go-skill-icons.vercel.app/api/icons?i=linux,maven,nodejs,npm,postman,powershell,vscode,ubuntu,vercel,spring,n8n,neo4j&perline=12" />
                         </div>
+
                         <br />
 
                     </motion.h2>

@@ -36,7 +36,7 @@ export default function Cv() {
                         </div>
                         <div className="flex items-center gap-2 cursor-target">
                             <Globe size={16} className="text-purple-500" />
-                            <a href="https://www.linkedin.com/in/alexandre-valente-rosado" className="hover:text-purple-500 transition">
+                            <a href="https://www.linkedin.com/in/alexandre-valente-rosado" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition">
                                 LinkedIn Profile
                             </a>
                         </div>
@@ -46,58 +46,6 @@ export default function Cv() {
                 <div className=" grid lg:grid-cols-3 gap-8">
                     {/* Left Column - Skills */}
                     <div className=" lg:col-span-1 space-y-8">
-                        {/* Compétences Techniques */}
-                        <div className=" card ">
-                            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                <Code size={20} className="text-purple-500" />
-                                Compétences
-                            </h3>
-                            
-                            <div className="space-y-5">
-                                <div>
-                                    <h4 className="font-semibold text-gray-300 mb-3 text-sm flex items-center gap-2">
-                                        <span className="text-purple-500">▸</span>
-                                        Programmation
-                                    </h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {['Java', 'Python', 'C', 'HTML/CSS', 'PHP', 'Ada', 'JSON', 'DART'].map(skill => (
-                                            <span key={skill} className="px-2.5 py-1 bg-purple-900/30 border border-purple-700/40 rounded-md text-xs text-gray-300 before:content-['\00a0'] after:content-['\00a0']">
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <br/>
-                                <div>
-                                    <h4 className="font-semibold text-gray-300 mb-3 text-sm flex items-center gap-2">
-                                        <span className="text-purple-500">▸</span>
-                                        Bases de Données
-                                    </h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {['SQL', 'PL/SQL', 'Access', 'Excel', 'NoSQL', 'MongoDB'].map(skill => (
-                                            <span key={skill} className="px-2.5 py-1 bg-purple-900/30 border border-purple-700/40 rounded-md text-xs text-gray-300 before:content-['\00a0'] after:content-['\00a0']">
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <br/>
-                                <div>
-                                    <h4 className="font-semibold text-gray-300 mb-3 text-sm flex items-center gap-2">
-                                        <span className="text-purple-500">▸</span>
-                                        Logiciels
-                                    </h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {['Oracle Apex','SQL Developer','Eclipse','GanttProject','MindView','Postman','VirtualBox','Vagrant','Docker','Android Studio','Git'].map(skill => (
-                                            <span key={skill} className="px-2.5 py-1 bg-purple-900/30 border border-purple-700/40 rounded-md text-xs text-gray-300 before:content-['\00a0'] after:content-['\00a0']">
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br/>
                         {/* Langues */}
                         <div className=" card ">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -217,7 +165,7 @@ export default function Cv() {
                         {/* Expérience et Projets */}
                         <div className=" card ">
                             <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-purple-900/50">
-                                Expérience et Projets
+                                Expérience
                             </h3>
                             <div className="space-y-5">
                                 <div className="cv-card-small">
@@ -227,76 +175,6 @@ export default function Cv() {
                                     </div>
                                     <h4 className="font-bold text-base text-white mb-2">Stage en Conception d'agents IA et contribution au développement d'un ERP</h4>
                                     <p className="text-sm text-purple-300">LIDR Solution</p>
-                                </div>
-
-                                <div className="cv-card">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Calendar size={14} className="text-purple-400" />
-                                        <span className="text-xs font-semibold text-purple-400">2025</span>
-                                    </div>
-                                    <h4 className="font-bold text-base text-white mb-3">Application web de gestion d'équipe sportive</h4>
-                                    <ul className="space-y-1.5 text-sm text-gray-400">
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Développement en PHP avec utilisation de JS et CSS</span>
-                                        </li>
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Base de données en SQL avec PDO</span>
-                                        </li>
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Conception UML</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="cv-card">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Calendar size={14} className="text-purple-400" />
-                                        <span className="text-xs font-semibold text-purple-400">2025</span>
-                                    </div>
-                                    <h4 className="font-bold text-base text-white">Création d'une API Rest</h4>
-                                </div>
-
-                                <div className="cv-card">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Calendar size={14} className="text-purple-400" />
-                                        <span className="text-xs font-semibold text-purple-400">2024</span>
-                                    </div>
-                                    <h4 className="font-bold text-base text-white mb-3">Application de gestion immobilière</h4>
-                                    <ul className="space-y-1.5 text-sm text-gray-400">
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Création d'une base de données en PL/SQL avec SQL Developer</span>
-                                        </li>
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Utilisation de l'architecture DAO et MVC</span>
-                                        </li>
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Interface graphique en Java - WindowBuilder</span>
-                                        </li>
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Gestion de projet selon la méthode Agile SCRUM avec Git</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="cv-card">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <Calendar size={14} className="text-purple-400" />
-                                        <span className="text-xs font-semibold text-purple-400">2023</span>
-                                    </div>
-                                    <h4 className="font-bold text-base text-white mb-2">Application de statistiques des Notes</h4>
-                                    <ul className="space-y-1.5 text-sm text-gray-400">
-                                        <li className="flex gap-2">
-                                            <span className="text-purple-500">•</span>
-                                            <span>Gestion et exploitation de la base de données avec Apex</span>
-                                        </li>
-                                    </ul>
                                 </div>
 
                                 <div className="cv-card-small">

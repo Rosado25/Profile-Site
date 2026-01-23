@@ -1,4 +1,4 @@
-import { CardWelcome, CardMe } from "../sections/home.jsx";
+import { CardWelcome, CardMe } from "../sections/introduction.jsx";
 import DotGrid from "../components/DotGrid.jsx";
 import { ProjetsCarousell } from "../sections/projets.jsx";
 import { CompetencesCards } from "../sections/competences.jsx";
