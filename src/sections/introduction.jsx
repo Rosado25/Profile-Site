@@ -50,10 +50,29 @@ export function CardWelcome() {
                         </motion.span>
                         <br />
                         <div className="flex flex-col items-center gap-4">
-                            <img src="https://go-skill-icons.vercel.app/api/icons?i=c,java,js,html,css,jquery,mongodb,mysql,androidstudio,arduino,vagrant,api&perline=12" />
-                            <img src="https://go-skill-icons.vercel.app/api/icons?i=php,py,dart,react,tailwind,vite,postgres,redis,bash,debian,virtualbox,plsql&perline=12" />
-                            <img src="https://go-skill-icons.vercel.app/api/icons?i=flutter,sqlite,supabase,eclipse,json,git,github,gitlab,gtk,docker,kubernetes,junit&perline=12" />
-                            <img src="https://go-skill-icons.vercel.app/api/icons?i=linux,maven,nodejs,npm,postman,powershell,vscode,ubuntu,vercel,spring,n8n,neo4j&perline=12" />
+                        {[
+                            ['c', 'java', 'js', 'html', 'css', 'jquery', 'mongodb', 'mysql', 'androidstudio', 'arduino', 'vagrant', 'api'],
+                            ['php', 'py', 'dart', 'react', 'tailwind', 'vite', 'postgres', 'redis', 'bash', 'debian', 'virtualbox', 'plsql'],
+                            ['flutter', 'sqlite', 'supabase', 'eclipse', 'json', 'git', 'github', 'gitlab', 'gtk', 'docker', 'kubernetes', 'junit'],
+                            ['linux', 'maven', 'nodejs', 'npm', 'postman', 'powershell', 'vscode', 'ubuntu', 'vercel', 'spring', 'n8n', 'neo4j']
+                        ].map((row, rowIndex) => (
+                            <div key={rowIndex} className="relative">
+                            <img src={`https://go-skill-icons.vercel.app/api/icons?i=${row.join(',')}&perline=12`} />
+                            <div className="absolute inset-0 flex">
+                                {row.map((icon, iconIndex) => (
+                                <div
+                                    key={iconIndex}
+                                    className="flex-1 group relative cursor-default cursor-target"
+                                    title={icon.toUpperCase()}
+                                >
+                                    <span className="invisible group-hover:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-10">
+                                    {icon.toUpperCase()}
+                                    </span>
+                                </div>
+                                ))}
+                            </div>
+                            </div>
+                        ))}
                         </div>
 
                         <br />
