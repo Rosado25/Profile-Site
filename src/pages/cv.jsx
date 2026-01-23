@@ -36,7 +36,7 @@ export default function Cv() {
                         </div>
                         <div className="flex items-center gap-2 cursor-target">
                             <Globe size={16} className="text-purple-500" />
-                            <a href="https://www.linkedin.com/in/alexandre-valente-rosado" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition">
+                            <a href="https://www.linkedin.com/in/alexandre-valente-rosado" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition cursor-none">
                                 LinkedIn Profile
                             </a>
                         </div>
