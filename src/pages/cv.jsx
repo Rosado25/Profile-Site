@@ -9,8 +9,12 @@ export default function Cv() {
                 {/* Header Section */}
                 <div className=" card ">
                     <div className=" flex flex-col md:flex-row items-center md:items-start gap-8">
-                        <div className=" card w-32 h-32 rounded-full bg-gradient-to-br from-purple-600 to-purple-900 flex items-center justify-center text-5xl font-bold text-white shadow-xl shadow-purple-500/20 flex-shrink-0">
-                            AV
+                        <div className="card ">
+                            <img
+                                src="/alex.webp"
+                                alt="Avatar"
+                                className="avatar2"
+                            />
                         </div>
                         <div className="flex-1 text-center md:text-left">
                             <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white">Alexandre</h1>
@@ -21,7 +25,9 @@ export default function Cv() {
                                 <p className="text-purple-400 font-medium">Recherche de stage BUT Informatique 3ème année</p>
                                 <p>12 à 16 semaines de mars (02/03/26)</p>
                             </div>
+                            
                         </div>
+                        
                     </div>
                     <br/>
                     {/* Contact Info */}
@@ -40,7 +46,15 @@ export default function Cv() {
                                 LinkedIn Profile
                             </a>
                         </div>
+                        <a
+                            href="/CV.pdf"
+                            download="CV.pdf"
+                            className="download-btn cursor-target cursor-none"
+                            >
+                            Télécharger le CV
+                        </a>
                     </div>
+                    
                 </div>
                 <br/>
                 <div className=" grid lg:grid-cols-3 gap-8">

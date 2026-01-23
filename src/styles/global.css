@@ -166,6 +166,35 @@ main {
     margin-bottom: 1rem;
 }
 
+.download-btn {
+    margin-left: auto;      /* empurra para a direita */
+    display: inline-block;  /* comporta-se como botão */
+    padding: 10px 18px;
+    background: rgb(79, 70, 229, 0.45);
+    color: var(--text-primary);
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.download-btn:hover {
+    border-color: rgba(82, 39, 255, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
+    background: rgba(57, 52, 158, 0.45);
+    color: var(--text-primary);
+}
+
+.avatar2 {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center bottom;
+    border-radius: 24px;
+}    
+
+
+
 /* Seção com DotGrid */
 .dotgrid-section {
     position: relative;
