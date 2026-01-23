@@ -1,18 +1,10 @@
-import Navbar from "../sections/Navbar.jsx";
-import TargetCursor from "../components/TargetCursor.jsx";
 
 
 export default function Contact() {
     return (
-        <>
-          <TargetCursor
-            spinDuration={2}
-            hideDefaultCursor={true}
-            parallaxOn={false}
-          />
-          <Navbar />
-
-          </>
+      <section className="simple-section py-20">
+        <h1>Contact Page</h1>
+      </section>
       );
     }
     

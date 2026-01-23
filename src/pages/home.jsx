@@ -1,7 +1,5 @@
-import Navbar from "../sections/Navbar.jsx";
 import { CardWelcome, CardMe } from "../sections/home.jsx";
 import DotGrid from "../components/DotGrid.jsx";
-import TargetCursor from "../components/TargetCursor.jsx";
 import { ProjetsCarousell } from "../sections/projets.jsx";
 import { CompetencesCards } from "../sections/competences.jsx";
 import { useLocation } from "react-router-dom";
@@ -36,12 +34,6 @@ export default function Home() {
 
   return (
     <>
-      <TargetCursor
-        spinDuration={2}
-        hideDefaultCursor={true}
-        parallaxOn={false}
-      />
-      <Navbar />
       <main>
         {/* Seção com DotGrid */}
         <section id="accueille" className="dotgrid-section">

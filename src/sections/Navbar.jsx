@@ -41,7 +41,7 @@ export default function Navbar() {
                 animate="visible"
             >
                 <MotionLink toId="accueille" >
-                    Accueille
+                    Accueil
                 </MotionLink>
                 <MotionLink toId="projects" >
                     Projets

@@ -148,6 +148,25 @@ main {
     min-height: 100vh;
 }
 
+.cv {
+    margin-top: 7rem;
+}
+
+.cv-card-small {
+    background: rgba(39, 31, 54, 0.45);
+    border-radius: 24px;
+    padding: 1rem;
+    padding-bottom: 0.001rem;
+    margin-bottom: 1rem;
+}
+
+.cv-card {
+    background: rgba(39, 31, 54, 0.45);
+    border-radius: 24px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
 /* Seção com DotGrid */
 .dotgrid-section {
     position: relative;
