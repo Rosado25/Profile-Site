@@ -62,7 +62,7 @@ export function CardWelcome() {
                                 {row.map((icon, iconIndex) => (
                                 <div
                                     key={iconIndex}
-                                    className="flex-1 group relative cursor-default cursor-target"
+                                    className="flex-1 group relative cursor-none cursor-target"
                                     title={icon.toUpperCase()}
                                 >
                                     <span className="invisible group-hover:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-10">

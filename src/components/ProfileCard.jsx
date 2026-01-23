@@ -357,7 +357,7 @@ const ProfileCardComponent = ({
                   <button
                     className="pc-contact-btn cursor-target"
                     onClick={handleContactClick}
-                    style={{ pointerEvents: 'auto' }}
+                    style={{ pointerEvents: 'auto', cursor: 'none', }}
                     type="button"
                     aria-label={`Contact ${name || 'user'}`}
                   >

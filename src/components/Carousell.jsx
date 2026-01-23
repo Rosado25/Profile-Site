@@ -27,20 +27,20 @@ const ArcProjectsCarousel = ({ items }) => {
         setIsDragging(true);
         setStartX(e.pageX - containerRef.current.offsetLeft);
         setScrollLeft(containerRef.current.scrollLeft);
-        containerRef.current.style.cursor = 'grabbing';
+        containerRef.current.style.cursor = 'none';
     };
 
     const handleMouseLeave = () => {
         setIsDragging(false);
         if (containerRef.current) {
-            containerRef.current.style.cursor = 'grab';
+            containerRef.current.style.cursor = 'none';
         }
     };
 
     const handleMouseUp = () => {
         setIsDragging(false);
         if (containerRef.current) {
-            containerRef.current.style.cursor = 'grab';
+            containerRef.current.style.cursor = 'none';
         }
     };
 
@@ -86,7 +86,7 @@ const ArcProjectsCarousel = ({ items }) => {
                             WebkitOverflowScrolling: 'touch',
                             scrollbarWidth: 'none',
                             msOverflowStyle: 'none',
-                            cursor: 'grab',
+                            cursor: 'none',
                             userSelect: 'none',
                             scrollBehavior: isDragging ? 'auto' : 'smooth'
                         }}
@@ -94,7 +94,7 @@ const ArcProjectsCarousel = ({ items }) => {
                         {items.map((project, index) => (
                             <div
                                 key={project.id}
-                                className="card shrink-0 w-80 h-100 overflow-hidden cursor-pointer"
+                                className="card shrink-0 w-80 h-100 overflow-hidden cursor-none"
                                 style={{
                                     ...getCardStyle(index),
                                     transition: isDragging ? 'none' : 'transform 0.3s ease-out'
