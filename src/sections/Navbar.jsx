@@ -49,10 +49,10 @@ export default function Navbar() {
                 <MotionLink toId="competences" >
                     Compétences
                 </MotionLink>
-                <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
+                <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target cursor-none">
                     Contact
                 </motion.a>
-                <motion.a href="/cv" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target">
+                <motion.a href="/cv" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target cursor-none">
                     CV
                 </motion.a>
             </motion.nav>
