@@ -148,6 +148,12 @@ main {
     min-height: 100vh;
 }
 
+.contact {
+    padding-top: 6%;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
 .cv {
     margin-top: 7rem;
 }
