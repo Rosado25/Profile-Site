@@ -7,7 +7,7 @@ export default function Time() {
     useEffect(() => {
     const timer = setInterval(() => {
         setCurrentTime(new Date());
-    }, 10000); // Atualiza a cada 60000ms = 1 minuto
+    }, 1000); // Atualiza a cada 60000ms = 1 minuto
 
     return () => clearInterval(timer); // Limpa o intervalo quando o componente desmontar
     }, []);
@@ -15,7 +15,9 @@ export default function Time() {
     // Formatar a hora no formato francês
     const timeString = currentTime.toLocaleTimeString('fr-FR', {
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
+    second: '2-digit',
+    timeZone: 'Europe/Paris' // Força hora de França
     });
 
     return (

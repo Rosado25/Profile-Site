@@ -149,7 +149,7 @@ main {
 }
 
 .contact-section {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
     background-color: var(--bg-primary);
     background-image: url(/back.webp);
     background-size: cover;
@@ -181,9 +181,11 @@ main {
 .btn-email {
     margin-left: 20%;       /* empurra para a direita */
     margin-bottom: 5%;
+    margin-top: 3%;
     display: inline-block;  /* comporta-se como botão */
     padding: 2% 10%;
     background: rgb(79, 70, 229, 0.45);
+    cursor: none;
     color: var(--text-primary);
     border-radius: 24px;
     text-decoration: none;
@@ -210,6 +212,15 @@ main {
     margin-bottom: 4rem;
     text-align: center;
 }
+
+.contact-card-left {
+    background: rgba(39, 31, 54, 0.45);
+    border-radius: 24px;
+    padding: 1rem;
+    padding-bottom: 0.001rem;
+    margin-bottom: 7%;
+}
+
 
 .cv {
     margin-top: 7rem;

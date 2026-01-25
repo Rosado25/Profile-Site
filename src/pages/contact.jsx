@@ -39,13 +39,13 @@ export default function ContactPage() {
 
             <div className="card">
               <h3 className="text-xl font-bold text-white mb-3">
-                Temps de Reponse
+                Temps de Réponse
               </h3>
               <p className="text-purple-200">
                 Normalement je reponds aux emails sous 24 à 48 heures.
               </p>
               <p className="text-purple-300 text-sm mt-2">
-                Heure locale ou j´habite: <Time />
+                Heure locale où j´habite: <Time />
               </p>
             </div>
           </div>

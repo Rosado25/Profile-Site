@@ -92,7 +92,7 @@ export default function ContactForm() {
     };
 
     return (
-    <div className="cv-card-small">
+    <div className="contact-card-left">
         <div className="space-y-6">
             <div>
                 <label className="flex items-center text-white mb-2 font-medium">
