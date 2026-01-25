@@ -179,7 +179,7 @@ export default function Cv() {
                             {/* Expérience et Projets */}
                             <div className=" card ">
                                 <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-purple-900/50">
-                                    Expérience
+                                    Expériences
                                 </h3>
                                 <div className="space-y-5">
                                     <div className="cv-card-small">

@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
 import ContactForm from "../sections/formulaireContact";
+import Time from "../components/Time";
 
 export default function ContactPage() {
   return (
@@ -11,7 +12,7 @@ export default function ContactPage() {
             Me Contacter
           </h1>
           <p className="text-xl text-purple-200">
-            Vous voulez me poser une question? N'hésitez pas à me contacter en utilisant le formulaire ci-dessous ou en m'envoyant un email directement.
+            Vous voulez me poser une question ? N'hésitez pas à me contacter en utilisant le formulaire ci-dessous ou en m'envoyant un email directement.
           </p>
         </div>
 
@@ -41,7 +42,10 @@ export default function ContactPage() {
                 Temps de Reponse
               </h3>
               <p className="text-purple-200">
-                Normalement je reponds aux emails dans 24-48 heures.
+                Normalement je reponds aux emails sous 24 à 48 heures.
+              </p>
+              <p className="text-purple-300 text-sm mt-2">
+                Heure locale ou j´habite: <Time />
               </p>
             </div>
           </div>
