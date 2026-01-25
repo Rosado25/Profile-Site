@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Globe, Code, Calendar, Languages, Users, Zap, Target, Gamepad2, Book, Dumbbell, Lightbulb } from 'lucide-react';
+import { MapPin, Globe, Code, Calendar, Languages, Users, Zap, Target, Gamepad2, Book, Dumbbell, Lightbulb } from 'lucide-react';
 
 export default function Cv() {
     return (
@@ -33,10 +33,6 @@ export default function Cv() {
                         {/* Contact Info */}
                         <div className=" mt-8 flex flex-wrap gap-6 justify-center md:justify-start text-sm text-gray-400">
                             <div className="flex items-center gap-2">
-                                <Mail size={16} className="text-purple-500" />
-                                <span>alexandrerosado2004@gmail.com</span>
-                            </div>
-                            <div className="flex items-center gap-2">
                                 <MapPin size={16} className="text-purple-500" />
                                 <span>Castres, Toulouse</span>
                             </div>
@@ -44,6 +40,12 @@ export default function Cv() {
                                 <Globe size={16} className="text-purple-500" />
                                 <a href="https://www.linkedin.com/in/alexandre-valente-rosado" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition cursor-none">
                                     LinkedIn Profile
+                                </a>
+                            </div>
+                            <div className="flex items-center gap-2 cursor-target">
+                                <Code size={16} className="text-purple-500" />
+                                <a href="https://github.com/Rosado25" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition cursor-none">
+                                    GitHub Profile
                                 </a>
                             </div>
                             <a

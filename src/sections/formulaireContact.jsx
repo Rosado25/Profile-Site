@@ -138,7 +138,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className={`card-entry w-full cursor-target ${errors.subject ? 'border-2 border-red-500' : ''}`}
-                placeholder="Vous voulez parler de quoi?"
+                placeholder="Vous voulez parler de quoi ?"
                 />
             </div>
 

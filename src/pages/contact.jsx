@@ -42,7 +42,7 @@ export default function ContactPage() {
                 Temps de Réponse
               </h3>
               <p className="text-purple-200">
-                Normalement je reponds aux emails sous 24 à 48 heures.
+                Normalement je réponds aux emails sous 24 à 48 heures.
               </p>
               <p className="text-purple-300 text-sm mt-2">
                 Heure locale où j´habite: <Time />
