@@ -107,7 +107,7 @@ export function CompetencesCards() {
                 </motion.div>
 
                 {/* Grid de compétences - 2 colonnes pour densité optimale */}
-                <div className=" cardcompetences grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl">
+                <div className=" cardcompetences grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-0 max-w-7xl">
                     {competences.map((comp, index) => (
                         <CompetenceCard
                             key={comp.id}

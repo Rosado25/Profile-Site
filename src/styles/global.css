@@ -148,6 +148,63 @@ main {
     min-height: 100vh;
 }
 
+.contact-section {
+    margin-top: 2.5rem;
+    background-color: var(--bg-primary);
+    background-image: url(/back.webp);
+    background-size: cover;
+}
+
+.card-entry {
+    background: rgba(39, 31, 54, 0.45);
+    border-radius: 24px;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: var(--transition);
+    margin-bottom: 2%;
+    scrollbar-width: none;
+    cursor: none;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card-entry:hover {
+    transform: translateY(-2px);
+    border-color: rgba(82, 39, 255, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
+}
+
+.card-entry:focus {
+    outline: 2px solid var(--accent);
+}
+
+.btn-email {
+    margin-left: 20%;       /* empurra para a direita */
+    margin-bottom: 5%;
+    display: inline-block;  /* comporta-se como botão */
+    padding: 2% 10%;
+    background: rgb(79, 70, 229, 0.45);
+    color: var(--text-primary);
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-email:hover {
+    border-color: rgba(82, 39, 255, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
+    background: rgba(57, 52, 158, 0.45);
+    color: var(--text-primary);
+}
+
+.messages-consola {
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 24px;
+    margin-bottom: 3%;
+}
 .contact {
     padding-top: 6%;
     margin-bottom: 4rem;
@@ -244,7 +301,7 @@ main {
     border-radius: 24px;
     padding: 2rem;
     transition: var(--transition);
-    margin-bottom: 0rem;
+    margin-bottom: 2rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 

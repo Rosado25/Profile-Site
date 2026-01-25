@@ -29,7 +29,7 @@ export default function Cv() {
                             </div>
                             
                         </div>
-                        <br/>
+                        
                         {/* Contact Info */}
                         <div className=" mt-8 flex flex-wrap gap-6 justify-center md:justify-start text-sm text-gray-400">
                             <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ export default function Cv() {
                         </div>
                         
                     </div>
-                    <br/>
+                    
                     <div className=" grid lg:grid-cols-3 gap-8">
                         {/* Left Column - Skills */}
                         <div className=" lg:col-span-1 space-y-8">
@@ -85,7 +85,7 @@ export default function Cv() {
                                     </div>
                                 </div>
                             </div>
-                            <br/>
+                            
                             {/* Compétences Relationnelles */}
                             <div className=" card ">
                                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function Cv() {
                                     ))}
                                 </div>
                             </div>
-                            <br/>
+                            
                             {/* Centres d'Intérêt */}
                             <div className=" card ">
                                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -175,7 +175,7 @@ export default function Cv() {
                                     </div>
                                 </div>
                             </div>
-                            <br/>
+                            
                             {/* Expérience et Projets */}
                             <div className=" card ">
                                 <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-purple-900/50">
