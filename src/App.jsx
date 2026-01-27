@@ -4,11 +4,12 @@ import Contact from "./pages/contact";
 import Cv from "./pages/cv";
 import Navbar from "./sections/Navbar.jsx";
 import TargetCursor from "./components/TargetCursor.jsx";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
     <BrowserRouter>
-      
+
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor={true}
@@ -16,13 +17,15 @@ function App() {
       />
 
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/cv" element={<Cv/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cv" element={<Cv />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
+
   );
 }
 

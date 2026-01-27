@@ -148,6 +148,22 @@ main {
     min-height: 100vh;
 }
 
+footer {
+    background: rgba(39, 31, 54, 0.45);
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: var(--transition);
+    cursor: none;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+footer:hover {
+    transform: translateY(-2px);
+    border-color: rgba(82, 39, 255, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
+}
+
 .contact-section {
     margin-top: 4rem;
     background-color: var(--bg-primary);
@@ -179,10 +195,12 @@ main {
 }
 
 .btn-email {
-    margin-left: 20%;       /* empurra para a direita */
+    margin-left: 20%;
+    /* empurra para a direita */
     margin-bottom: 5%;
     margin-top: 3%;
-    display: inline-block;  /* comporta-se como botão */
+    display: inline-block;
+    /* comporta-se como botão */
     padding: 2% 10%;
     background: rgb(79, 70, 229, 0.45);
     cursor: none;
@@ -207,6 +225,7 @@ main {
     border-radius: 24px;
     margin-bottom: 3%;
 }
+
 .contact {
     padding-top: 6%;
     margin-bottom: 4rem;
@@ -235,8 +254,10 @@ main {
 }
 
 .download-btn {
-    margin-left: auto;      /* empurra para a direita */
-    display: inline-block;  /* comporta-se como botão */
+    margin-left: auto;
+    /* empurra para a direita */
+    display: inline-block;
+    /* comporta-se como botão */
     padding: 10px 18px;
     background: rgb(79, 70, 229, 0.45);
     color: var(--text-primary);
@@ -259,7 +280,7 @@ main {
     object-fit: cover;
     object-position: center bottom;
     border-radius: 24px;
-}    
+}
 
 
 

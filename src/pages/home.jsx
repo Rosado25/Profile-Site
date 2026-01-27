@@ -17,14 +17,14 @@ export default function Home() {
     console.log(location.state.scrollTo);
 
     if (el) {
-      
+
       const offsets = {
         projects: -177,
         competences: -160,
       };
-      
+
       const offset = offsets[location.state.scrollTo] ?? 0;
-      
+
       console.log(offset);
       const top = el.getBoundingClientRect().top + window.scrollY + offset;
       window.scrollTo({ top, behavior: "smooth" });
