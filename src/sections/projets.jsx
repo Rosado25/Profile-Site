@@ -4,45 +4,59 @@ import { motion } from 'framer-motion';
 const myCards = [
     {
         id: 1,
+        image: '256-logo2.webp',
         title: 'Site CV',
         description: 'Projet site web personnel',
+        link: 'https://github.com/Rosado25/Profile-Site',
         tags: ['Web', 'Personnel']
     },
     {
         id: 2,
+        image: 'logo_App.png',
         title: 'Smartbites',
         description: 'App de reccetes et courses',
+        link: 'https://github.com/fortwoone/SmartBites',
         tags: ['Android', 'Groupe']
     },
     {
         id: 3,
+        image: 'logoGes.png',
         title: 'Gestion d\'équipe',
         description: 'Site avec API personnel',
+        link: 'https://github.com/Rosado25/GestionEquipeSport-Interface',
         tags: ['Web', 'Binome']
     },
     {
         id: 4,
+        image: 'Logo_Echoo.png',
         title: 'Echoo Messagerie',
         description: 'Site avec Ajax',
-        tags: ['Web', 'Binome']
+        link: 'https://github.com/ElAbdos/Echoo_Messagerie-2024--2025-',
+        tags: ['Web', 'Trinome']
     },
     {
         id: 5,
+        image: 'blumbat.png',
         title: 'BlumBat',
         description: 'App de gestion immobilière',
+        link: 'https://github.com/ElAbdos/BlumBat',
         tags: ['Java', 'Groupe']
     },
     {
         id: 6,
+        image: 'C_Logo.png',
         title: 'Validateur  d\'IP',
         description: 'Validateur de Réseau',
+        link: 'https://github.com/Rosado25/Validateur-d-Adresse-IP',
         tags: ['C', 'Binome']
     },
     {
         id: 7,
-        title: 'App Statistiques',
-        description: 'Exploitation des données',
-        tags: ['Apex', 'Personnel']
+        image: 'Python_logo.png',
+        title: 'Recommandation',
+        description: 'Systèmes recommandation',
+        link: 'https://github.com/ElAbdos/systeme-de-recommandation',
+        tags: ['Python', 'Binome']
     }
 ];
 

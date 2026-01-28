@@ -9,7 +9,7 @@ const ArcProjectsCarousel = ({ items }) => {
 
     const updateCardPositions = () => {
         if (containerRef.current) {
-            containerRef.current.querySelectorAll('.card').forEach((card, index) => {
+            containerRef.current.querySelectorAll('.card-proj').forEach((card, index) => {
                 const style = getCardStyle(index);
                 card.style.transform = style.transform;
             });
@@ -94,18 +94,20 @@ const ArcProjectsCarousel = ({ items }) => {
                         {items.map((project, index) => (
                             <div
                                 key={project.id}
-                                className="card shrink-0 w-80 h-100 overflow-hidden cursor-none"
+                                className="card-proj shrink-0 w-80 h-105 overflow-hidden cursor-none"
                                 style={{
                                     ...getCardStyle(index),
                                     transition: isDragging ? 'none' : 'transform 0.3s ease-out'
                                 }}
                             >
                                 <div
-                                    className="relative overflow-hidden bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] h-48 rounded-2xl"
+                                    className="card-image"
                                 >
-                                    <div className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-15">
-                                        {project.title.charAt(0)}
-                                    </div>
+                                    <img
+                                        alt={project.title.charAt(0)}
+                                        className="w-full h-full object-contain"
+                                        src={project.image}
+                                    />
                                 </div>
                                 <br />
                                 <div className="p-6">
@@ -115,15 +117,25 @@ const ArcProjectsCarousel = ({ items }) => {
                                     <p className="text-gray-400">
                                         {project.description}
                                     </p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tags.map((tag, i) => (
-                                            <span
-                                                key={i}
-                                                className="inline-block px-4 py-2 text-sm leading-normal rounded-2xl bg-[rgba(82,39,255,0.15)] text-[rgba(200,180,255,0.9)] border border-[rgba(82,39,255,0.3)] before:content-['\00a0'] after:content-['\00a0']"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
+                                    <div className='flex items-center'>
+                                        <div className="flex gap-2">
+                                            {project.tags.map((tag, i) => (
+                                                <span
+                                                    key={i}
+                                                    className="inline-block px-4 py-2 text-sm leading-normal rounded-2xl bg-[rgba(82,39,255,0.15)] text-[rgba(200,180,255,0.9)] border border-[rgba(82,39,255,0.3)] before:content-['\00a0'] after:content-['\00a0']"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="projet-btn cursor-target cursor-none whitespace-nowrap"
+                                        >
+                                            Projet
+                                        </a>
                                     </div>
                                 </div>
                             </div>
