@@ -43,9 +43,6 @@ To create a production build, run:
 npm run build
 ```
 
-## License
-This project is licensed under the MIT License.
-
 ## Components Used
 This portfolio features custom React components from [ReactBits](https://reactbits.dev/):
 - **GlassSurface**: Glassmorphism effect component for modern UI design
