@@ -14,8 +14,6 @@ export default function Home() {
 
     const el = document.getElementById(location.state.scrollTo);
 
-    console.log(location.state.scrollTo);
-
     if (el) {
 
       const offsets = {
@@ -25,7 +23,6 @@ export default function Home() {
 
       const offset = offsets[location.state.scrollTo] ?? 0;
 
-      console.log(offset);
       const top = el.getBoundingClientRect().top + window.scrollY + offset;
       window.scrollTo({ top, behavior: "smooth" });
     }

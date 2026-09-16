@@ -28,8 +28,8 @@ export default function Navbar() {
     return (
 
         <GlassSurface
-            width={1000}
-            height={100}
+            width="min(1000px, calc(100vw - 2rem))"
+            height="auto"
             borderRadius={24}
             className="glass-surface-navbar"
             backgroundOpacity={0.1}

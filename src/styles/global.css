@@ -80,39 +80,32 @@ body {
 
 .glass-surface-navbar {
     position: fixed;
-    top: 5%;
-    left: 0;
-    right: 0;
+    top: max(0.75rem, env(safe-area-inset-top));
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 1.5rem 2rem;
+    padding: 0.35rem 0.75rem;
     z-index: 1000;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .navbar {
-    position: fixed;
-    top: 5%;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 1.5rem 2rem;
-    z-index: 1000;
+    gap: clamp(0.25rem, 2vw, 1.5rem);
+    width: 100%;
+    padding: 0.35rem;
 }
 
 .navbar a {
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 550;
-    font-size: 1.1rem;
+    font-size: clamp(0.82rem, 1.8vw, 1.1rem);
     letter-spacing: 0.02em;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem clamp(0.45rem, 1.5vw, 1rem);
     border-radius: 6px;
     transition: var(--transition);
     position: relative;
@@ -322,7 +315,7 @@ footer:hover {
     margin: 2% auto 0 auto;
     display: flex;
     /* aligne côte à côte */
-    gap: 10%;
+    gap: clamp(2rem, 8vw, 10%);
     /* espace entre eux */
 }
 
@@ -384,10 +377,26 @@ footer:hover {
 }
 
 .card-proj:hover {
-    transform: translateY(-4px);
     border-color: rgba(82, 39, 255, 0.4);
     box-shadow: 0 12px 40px 0 rgba(82, 39, 255, 0.2);
 }
+
+.project-carousel-perspective { perspective: 1200px; }
+.project-carousel { display: flex; justify-content: flex-start; gap: clamp(1rem, 2.5vw, 2.5rem); min-height: 680px; overflow-x: auto; overflow-y: clip; padding: 5.5rem clamp(1rem, 4vw, 5rem) 1rem; scrollbar-width: none; touch-action: pan-y; user-select: none; cursor: grab; }
+.project-carousel::-webkit-scrollbar { display: none; }
+.project-carousel.is-dragging { cursor: grabbing; }
+.project-carousel__card { flex: 0 0 clamp(320px, 28vw, 460px); height: 490px; margin: 0; padding: 1.5rem; scroll-snap-align: center; transform-origin: center bottom; transition: box-shadow 180ms ease-out; will-change: transform; }
+.project-carousel__image { width: 100%; height: 195px; margin: 0; padding: 1rem; }
+.project-carousel__image img { width: 100%; height: 100%; object-fit: contain; }
+.project-carousel__content { padding: 1rem 0 0; }
+.project-carousel__content h3 { font-size: clamp(1.4rem, 1.7vw, 1.75rem); margin-bottom: 0.25rem; }
+.project-carousel__content p { font-size: clamp(0.95rem, 1.1vw, 1.05rem); line-height: 1.45; min-height: 3rem; }
+.project-carousel__footer { display: flex; align-items: center; gap: 0.75rem; }
+.project-carousel__tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.project-carousel__tags span { padding: 0.25rem 0.5rem; font-size: 0.72rem; border: 1px solid rgba(82,39,255,0.3); border-radius: 999px; background: rgba(82,39,255,0.15); color: rgba(200,180,255,0.9); }
+.project-carousel .projet-btn { margin-left: auto; padding: 0.5rem 0.75rem; font-size: 0.85rem; }
+
+.tech-icon-hitareas { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 
 .cardcomp {
     min-height: 230px;
@@ -469,14 +478,13 @@ a:hover {
 /* Responsividade */
 @media (max-width: 768px) {
     .navbar {
-        gap: 1rem;
-        padding: 1rem;
-        flex-wrap: wrap;
+        gap: 0.1rem;
+        justify-content: space-around;
     }
 
     .navbar a {
-        font-size: 1rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.78rem;
+        padding: 0.45rem 0.35rem;
     }
 
     .dotgrid-section {
@@ -506,6 +514,57 @@ a:hover {
     .card {
         padding: 1.5rem;
     }
+
+    .dotgrid-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-carousel { min-height: 455px; padding: 4rem 1rem 0.5rem; }
+    .project-carousel__card { flex-basis: min(80vw, 320px); height: 365px; padding: 1.25rem; }
+    .project-carousel__image { height: 125px; }
+}
+
+@media (min-width: 1200px) {
+    .dotgrid-content {
+        width: min(1500px, calc(100% - 6rem));
+        max-width: none;
+        align-items: center;
+    }
+
+    .dotgrid-content > :first-child { flex: 1 1 0; }
+    .pc-card { height: min(72svh, 650px); max-height: 650px; }
+
+    .introduction-welcome {
+        height: min(72svh, 650px);
+        margin-bottom: 0;
+    }
+
+    .introduction-profile,
+    .introduction-profile .pc-card-wrapper,
+    .introduction-profile .pc-card-shell {
+        height: min(72svh, 650px);
+    }
+
+    .introduction-welcome > div {
+        transform: translateY(3.5rem) scale(1.08);
+        transform-origin: center;
+    }
+
+    .welcome-title { margin-left: clamp(1.5rem, 3vw, 3rem); }
+
+    .tech-icon-row { transform: translateX(-1.5rem); }
+    .tech-icon-row img { display: block; max-width: 100%; }
+    .tech-icon-hitareas { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1440px) {
+    .dotgrid-section { min-height: 112vh; }
+
+    .dotgrid-content {
+        transform: scale(1.2);
+        transform-origin: top center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -519,8 +578,22 @@ a:hover {
     }
 
     .navbar a {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.85rem;
+        padding: 0.35rem 0.25rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .cursor-none { cursor: auto !important; }
+    .card:hover, .card-entry:hover, footer:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
 

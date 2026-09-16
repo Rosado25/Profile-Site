@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useEffect, useRef, useCallback, useMemo, useState } from 'react';
 import '../styles/ProfileCard.css';
 
 const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)';
@@ -38,6 +38,7 @@ const ProfileCardComponent = ({
 }) => {
   const wrapRef = useRef(null);
   const shellRef = useRef(null);
+  const [canAnimate, setCanAnimate] = useState(false);
 
   const enterTimerRef = useRef(null);
   const leaveRafRef = useRef(null);
@@ -113,7 +114,7 @@ const ProfileCardComponent = ({
 
       const stillFar = Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05;
 
-      if (stillFar || document.hasFocus()) {
+      if (stillFar) {
         rafId = requestAnimationFrame(step);
       } else {
         running = false;
@@ -164,6 +165,14 @@ const ProfileCardComponent = ({
       }
     };
   }, [enableTilt]);
+
+  useEffect(() => {
+    const query = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+    const update = () => setCanAnimate(query.matches);
+    update();
+    query.addEventListener?.('change', update);
+    return () => query.removeEventListener?.('change', update);
+  }, []);
 
   const getOffsets = (evt, el) => {
     const rect = el.getBoundingClientRect();
@@ -241,7 +250,7 @@ const ProfileCardComponent = ({
   );
 
   useEffect(() => {
-    if (!enableTilt || !tiltEngine) return;
+    if (!enableTilt || !canAnimate || !tiltEngine) return;
 
     const shell = shellRef.current;
     if (!shell) return;
@@ -292,6 +301,7 @@ const ProfileCardComponent = ({
     };
   }, [
     enableTilt,
+    canAnimate,
     enableMobileTilt,
     tiltEngine,
     handlePointerMove,
@@ -334,38 +344,38 @@ const ProfileCardComponent = ({
                   t.style.display = 'none';
                 }}
               />
-              {showUserInfo && (
-                <div className="pc-user-info">
-                  <div className="pc-user-details">
-                    <div className="pc-mini-avatar">
-                      <img
-                        src={miniAvatarUrl || avatarUrl}
-                        alt={`${name || 'User'} mini avatar`}
-                        loading="lazy"
-                        onError={e => {
-                          const t = e.target;
-                          t.style.opacity = '0.5';
-                          t.src = avatarUrl;
-                        }}
-                      />
-                    </div>
-                    <div className="pc-user-text">
-                      <div className="pc-handle">@{handle}</div>
-                      <div className="pc-status">{status}</div>
-                    </div>
-                  </div>
-                  <button
-                    className="pc-contact-btn cursor-target"
-                    onClick={handleContactClick}
-                    style={{ pointerEvents: 'auto', cursor: 'none', }}
-                    type="button"
-                    aria-label={`Contact ${name || 'user'}`}
-                  >
-                    {contactText}
-                  </button>
-                </div>
-              )}
             </div>
+            {showUserInfo && (
+              <div className="pc-user-info">
+                <div className="pc-user-details">
+                  <div className="pc-mini-avatar">
+                    <img
+                      src={miniAvatarUrl || avatarUrl}
+                      alt={`${name || 'User'} mini avatar`}
+                      loading="lazy"
+                      onError={e => {
+                        const t = e.target;
+                        t.style.opacity = '0.5';
+                        t.src = avatarUrl;
+                      }}
+                    />
+                  </div>
+                  <div className="pc-user-text">
+                    <div className="pc-handle">@{handle}</div>
+                    <div className="pc-status">{status}</div>
+                  </div>
+                </div>
+                <button
+                  className="pc-contact-btn cursor-target"
+                  onClick={handleContactClick}
+                  style={{ pointerEvents: 'auto', cursor: 'none' }}
+                  type="button"
+                  aria-label={`Contact ${name || 'user'}`}
+                >
+                  {contactText}
+                </button>
+              </div>
+            )}
             <div className="pc-content">
               <div className="pc-details">
                 <h2>{name}</h2>

@@ -27,10 +27,10 @@ export function CardWelcome() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className='card relative overflow-hidden'
+            className='card introduction-welcome relative overflow-hidden'
         >
 
-            <div className="relative z-10 h-full flex flex-col justify-between p-8 md:p-12">
+            <div className="relative z-10 h-full flex flex-col p-8 md:px-12 md:pt-16 md:pb-12">
 
                 {/* Títulos principais */}
                 <motion.div
@@ -38,7 +38,7 @@ export function CardWelcome() {
                     className="space-y-2"
                 >
                     <motion.h2
-                        className="text-6xl md:text-7xl lg:text-8xl font-bold"
+                        className="welcome-title text-6xl md:text-7xl lg:text-8xl font-bold"
                         variants={itemVariants}
                     >
                         <motion.span
@@ -56,9 +56,9 @@ export function CardWelcome() {
                             ['flutter', 'sqlite', 'supabase', 'eclipse', 'json', 'git', 'github', 'gitlab', 'gtk', 'docker', 'kubernetes', 'junit'],
                             ['linux', 'maven', 'nodejs', 'npm', 'postman', 'powershell', 'vscode', 'ubuntu', 'vercel', 'spring', 'n8n', 'neo4j']
                         ].map((row, rowIndex) => (
-                            <div key={rowIndex} className="relative">
-                            <img src={`https://go-skill-icons.vercel.app/api/icons?i=${row.join(',')}&perline=12`} />
-                            <div className="absolute inset-0 flex">
+                            <div key={rowIndex} className="tech-icon-row relative">
+                            <img src={`https://go-skill-icons.vercel.app/api/icons?i=${row.join(',')}&perline=12`} alt={`Tecnologias: ${row.join(', ')}`} />
+                            <div className="tech-icon-hitareas absolute inset-0">
                                 {row.map((icon, iconIndex) => (
                                 <div
                                     key={iconIndex}
@@ -83,7 +83,7 @@ export function CardWelcome() {
                 {/* Estatísticas / Tech stack */}
                 <motion.div
                     variants={itemVariants}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6 my-8"
+                    className="mt-auto mb-0 grid grid-cols-2 md:grid-cols-4 gap-6"
                 >
                     <motion.div
                         className="text-center"
@@ -147,6 +147,7 @@ export function CardMe() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
+            className="introduction-profile"
         >
             <ProfileCard
                 name="Alexandre Rosado"

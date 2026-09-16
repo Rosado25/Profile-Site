@@ -1,4 +1,4 @@
-import { useEffect, useRef, useId } from 'react';
+import { useEffect, useRef, useId, useMemo } from 'react';
 import '../styles/GlassSurface.css';
 
 const GlassSurface = ({
@@ -104,29 +104,17 @@ const GlassSurface = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    let frameId;
     const resizeObserver = new ResizeObserver(() => {
-      setTimeout(updateDisplacementMap, 0);
+      cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(updateDisplacementMap);
     });
 
     resizeObserver.observe(containerRef.current);
 
     return () => {
       resizeObserver.disconnect();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const resizeObserver = new ResizeObserver(() => {
-      setTimeout(updateDisplacementMap, 0);
-    });
-
-    resizeObserver.observe(containerRef.current);
-
-    return () => {
-      resizeObserver.disconnect();
+      cancelAnimationFrame(frameId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -136,7 +124,7 @@ const GlassSurface = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [width, height]);
 
-  const supportsSVGFilters = () => {
+  const supportsSVGFilters = useMemo(() => {
     const isWebkit = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
     const isFirefox = /Firefox/.test(navigator.userAgent);
 
@@ -147,7 +135,7 @@ const GlassSurface = ({
     const div = document.createElement('div');
     div.style.backdropFilter = `url(#${filterId})`;
     return div.style.backdropFilter !== '';
-  };
+  }, [filterId]);
 
   const containerStyle = {
     ...style,
@@ -162,7 +150,7 @@ const GlassSurface = ({
   return (
     <div
       ref={containerRef}
-      className={`glass-surface ${supportsSVGFilters() ? 'glass-surface--svg' : 'glass-surface--fallback'} ${className}`}
+      className={`glass-surface ${supportsSVGFilters ? 'glass-surface--svg' : 'glass-surface--fallback'} ${className}`}
       style={containerStyle}
     >
       <svg className="glass-surface__filter" xmlns="http://www.w3.org/2000/svg">

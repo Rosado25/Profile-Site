@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useEffect, useCallback, useMemo } from 'react';
+import { useRef, useEffect, useCallback, useMemo, useState } from 'react';
 import { gsap } from 'gsap';
 import { InertiaPlugin } from 'gsap/InertiaPlugin';
 
@@ -45,6 +45,7 @@ const DotGrid = ({
 }) => {
   const wrapperRef = useRef(null);
   const canvasRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
   const dotsRef = useRef([]);
   const pointerRef = useRef({
     x: 0,
@@ -74,7 +75,7 @@ const DotGrid = ({
     if (!wrap || !canvas) return;
 
     const { width, height } = wrap.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     canvas.width = width * dpr;
     canvas.height = height * dpr;
@@ -109,6 +110,7 @@ const DotGrid = ({
 
   useEffect(() => {
     if (!circlePath) return;
+    if (!isVisible) return undefined;
 
     let rafId;
     const proxSq = proximity * proximity;
@@ -151,7 +153,7 @@ const DotGrid = ({
 
     draw();
     return () => cancelAnimationFrame(rafId);
-  }, [proximity, baseColor, activeRgb, baseRgb, circlePath]);
+  }, [isVisible, proximity, baseColor, activeRgb, baseRgb, circlePath]);
 
   useEffect(() => {
     buildGrid();
@@ -167,6 +169,14 @@ const DotGrid = ({
       else window.removeEventListener('resize', buildGrid);
     };
   }, [buildGrid]);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper || !('IntersectionObserver' in window)) return undefined;
+    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), { threshold: 0 });
+    observer.observe(wrapper);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const onMove = e => {
