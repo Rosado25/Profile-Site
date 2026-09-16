@@ -21,9 +21,9 @@ export default function Cv() {
                                 <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-300">Valente Rosado</h2>
                                 <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-purple-700 mb-4 mx-auto md:mx-0"></div>
                                 <div className="space-y-1 text-gray-400 text-sm">
-                                    <p>21 ans | Permis B</p>
-                                    <p className="text-purple-400 font-medium">Recherche de stage BUT Informatique 3ème année</p>
-                                    <p>12 à 16 semaines de mars (02/03/26)</p>
+                                    <p>22 ans | Permis B</p>
+                                    <p className="text-purple-400 font-medium">Diplômé du BUT Informatique | Recherche d'emploi</p>
+                                    <p>Disponible dès maintenant</p>
                                 </div>
                                 
                             </div>
@@ -142,10 +142,10 @@ export default function Cv() {
                                         <div className="absolute -left-[9px] w-4 h-4 rounded-full bg-purple-600 border-2 border-purple-400"></div>
                                         <div className="flex items-center gap-4 mb-2">
                                             <Calendar size={14} className="text-purple-400 relative -right-[13px]" />
-                                            <span className="text-xs font-semibold text-purple-400">2023 - Aujourd'hui</span>
+                                            <span className="text-xs font-semibold text-purple-400">2023 - 2026</span>
                                         </div>
                                         <div className="relative -right-[9px]">
-                                            <h4 className="font-bold text-base text-white mb-1">Deuxième année de BUT Informatique</h4>
+                                            <h4 className="font-bold text-base text-white mb-1">BUT Informatique</h4>
                                             <p className="text-sm text-gray-400 mb-1">Conception, développement et validation d'application</p>
                                             <p className="text-xs text-gray-500">IUT Paul-Sabatier, Toulouse (31)</p>
                                         </div>
@@ -184,6 +184,15 @@ export default function Cv() {
                                     Expériences
                                 </h3>
                                 <div className="space-y-5">
+                                    <div className="cv-card-small">
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <Calendar size={14} className="text-purple-400" />
+                                            <span className="text-xs font-semibold text-purple-400">2026</span>
+                                        </div>
+                                        <h4 className="font-bold text-base text-white mb-2">Stage de fin d'études - Développement d'une application de supervision et pilotage</h4>
+                                        <p className="text-sm text-purple-300">TBI / INSA Toulouse</p>
+                                    </div>
+
                                     <div className="cv-card-small">
                                         <div className="flex items-center gap-2 mb-2">
                                             <Calendar size={14} className="text-purple-400" />

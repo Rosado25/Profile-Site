@@ -152,7 +152,7 @@ export function CardMe() {
                 name="Alexandre Rosado"
                 title=""
                 handle="Rosado25"
-                status="Recherche de Stage"
+                status="Recherche d'emploi"
                 contactText="Contact Moi"
                 avatarUrl="/alex.webp"
                 grainUrl="/grain.webp"
