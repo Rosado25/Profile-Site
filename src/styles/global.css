@@ -525,6 +525,66 @@ a:hover {
     .project-carousel__image { height: 125px; }
 }
 
+/* Faixa "portátil": muitas resoluções comuns (1280x800, 1366x768, 1280x1024...)
+   caíam entre o breakpoint mobile e o de 1200px sem nenhum limite de altura
+   para os cards, o que fazia o welcome/profile ficarem mais altos do que a
+   secção e serem cortados pelo clip-path. */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .dotgrid-section {
+        padding: 9rem 1.5rem 3rem;
+    }
+
+    .dotgrid-content {
+        align-items: center;
+    }
+
+    .pc-card {
+        height: min(68svh, 560px);
+        max-height: 560px;
+    }
+
+    .introduction-welcome {
+        height: min(68svh, 560px);
+        margin-bottom: 0;
+    }
+
+    .introduction-profile,
+    .introduction-profile .pc-card-wrapper,
+    .introduction-profile .pc-card-shell {
+        height: min(68svh, 560px);
+    }
+}
+
+/* Rede de segurança por altura: em portáteis a largura pode ser grande
+   (1440px, 1536px, 1920px) mas a altura de janela disponível é curta.
+   Sem isto, o scale(1.2) do breakpoint de 1440px cortava os cards. */
+@media (max-height: 820px) {
+    .dotgrid-section {
+        padding-top: 8rem;
+        min-height: auto;
+    }
+
+    .pc-card {
+        height: min(62svh, 520px);
+        max-height: 520px;
+    }
+
+    .introduction-welcome {
+        height: min(62svh, 520px);
+        margin-bottom: 0;
+    }
+
+    .introduction-profile,
+    .introduction-profile .pc-card-wrapper,
+    .introduction-profile .pc-card-shell {
+        height: min(62svh, 520px);
+    }
+
+    .introduction-welcome > div {
+        transform: none;
+    }
+}
+
 @media (min-width: 1200px) {
     .dotgrid-content {
         width: min(1500px, calc(100% - 6rem));
@@ -558,12 +618,14 @@ a:hover {
     .tech-icon-hitareas { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 }
 
-@media (min-width: 1440px) {
-    .dotgrid-section { min-height: 112vh; }
-
+/* Em ecrãs muito grandes de secretária ampliamos a largura REAL do
+   conteúdo (não com transform:scale). O scale(1.2) que existia aqui
+   alargava visualmente os cards para além da própria secção — como a
+   secção tem overflow:hidden, isso cortava ícones e texto nas laterais
+   em muitos portáteis (1440x900, 1536x864, etc.). */
+@media (min-width: 1800px) {
     .dotgrid-content {
-        transform: scale(1.2);
-        transform-origin: top center;
+        width: min(1600px, calc(100% - 6rem));
     }
 }
 
