@@ -1,15 +1,16 @@
+
 import React from 'react';
 import { MapPin, Globe, Code, Calendar, Languages, Users, Zap, Target, Gamepad2, Book, Dumbbell, Lightbulb } from 'lucide-react';
 
 export default function Cv() {
     return (
         <div className="simple-section">
-            <div className=" cv min-h-screen pt-20 pb-12 px-4 flex justify-center mt-20">
+            <div className="cv min-h-screen pt-20 pb-12 px-4 flex justify-center mt-20">
                 <div className="max-w-7xl mx-auto">
                     {/* Header Section */}
-                    <div className=" card ">
-                        <div className=" flex flex-col md:flex-row items-center md:items-start gap-8">
-                            <div className="card ">
+                    <div className="card">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                            <div className="card">
                                 <img
                                     src="/alex.webp"
                                     alt="Avatar"
@@ -21,20 +22,18 @@ export default function Cv() {
                                 <h2 className="text-3xl md:text-4xl font-light mb-4 text-gray-300">Valente Rosado</h2>
                                 <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-purple-700 mb-4 mx-auto md:mx-0"></div>
                                 <div className="space-y-1 text-gray-400 text-sm">
-                                    <p>22 ans | Permis B</p>
-                                    <p className="text-purple-400 font-medium">Diplômé du BUT Informatique | Recherche d'emploi</p>
-                                    <p>Disponible dès maintenant</p>
+                                    <p>22 years old | Category B Driving Licence</p>
+                                    <p className="text-purple-400 font-medium">Bachelor's Degree in Computer Science | Seeking Employment</p>
+                                    <p>Available immediately</p>
                                 </div>
-                                
                             </div>
-                            
                         </div>
-                        
+
                         {/* Contact Info */}
-                        <div className=" mt-8 flex flex-wrap gap-6 justify-center md:justify-start text-sm text-gray-400">
+                        <div className="mt-8 flex flex-wrap gap-6 justify-center md:justify-start text-sm text-gray-400">
                             <div className="flex items-center gap-2">
                                 <MapPin size={16} className="text-purple-500" />
-                                <span>Castres, Toulouse</span>
+                                <span>Castres, Toulouse, São João da Madeira</span>
                             </div>
                             <div className="flex items-center gap-2 cursor-target">
                                 <Globe size={16} className="text-purple-500" />
@@ -52,53 +51,53 @@ export default function Cv() {
                                 href="/CV.pdf"
                                 download="CV.pdf"
                                 className="download-btn cursor-target cursor-none"
-                                >
-                                Télécharger le CV
+                            >
+                                Download CV
                             </a>
                         </div>
-                        
                     </div>
-                    
-                    <div className=" grid lg:grid-cols-3 gap-8">
+
+                    <div className="grid lg:grid-cols-3 gap-8">
                         {/* Left Column - Skills */}
-                        <div className=" lg:col-span-1 space-y-8">
-                            {/* Langues */}
-                            <div className=" card ">
+                        <div className="lg:col-span-1 space-y-8">
+
+                            {/* Languages */}
+                            <div className="card">
                                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                     <Languages size={20} className="text-purple-500" />
-                                    Langues
+                                    Languages
                                 </h3>
                                 <div className="space-y-2.5 text-sm">
                                     <div className="flex justify-between items-center">
-                                        <span className="text-gray-300 font-medium">Portugais</span>
-                                        <span className="text-gray-500 text-xs">Langue Maternelle</span>
+                                        <span className="text-gray-300 font-medium">Portuguese</span>
+                                        <span className="text-gray-500 text-xs">Native</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-gray-300 font-medium">Anglais</span>
-                                        <span className="text-gray-500 text-xs">Niveau C1</span>
+                                        <span className="text-gray-300 font-medium">English</span>
+                                        <span className="text-gray-500 text-xs">C1 Level</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-gray-300 font-medium">Français</span>
-                                        <span className="text-gray-500 text-xs">Courant</span>
+                                        <span className="text-gray-300 font-medium">French</span>
+                                        <span className="text-gray-500 text-xs">Fluent</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-gray-300 font-medium">Espagnol</span>
-                                        <span className="text-gray-500 text-xs">Niveau B1</span>
+                                        <span className="text-gray-300 font-medium">Spanish</span>
+                                        <span className="text-gray-500 text-xs">B1 Level</span>
                                     </div>
                                 </div>
                             </div>
-                            
-                            {/* Compétences Relationnelles */}
-                            <div className=" card ">
+
+                            {/* Soft Skills */}
+                            <div className="card">
                                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                     <Users size={20} className="text-purple-500" />
                                     Soft Skills
                                 </h3>
                                 <div className="space-y-2.5">
                                     {[
-                                        { icon: Users, text: 'Travail en équipe' },
-                                        { icon: Zap, text: 'Adaptabilité' },
-                                        { icon: Target, text: 'Rigueur et précision' }
+                                        { icon: Users, text: 'Teamwork' },
+                                        { icon: Zap, text: 'Adaptability' },
+                                        { icon: Target, text: 'Attention to Detail and Accuracy' }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-center gap-2.5 text-sm text-gray-300">
                                             <item.icon size={16} className="text-purple-500" />
@@ -107,19 +106,19 @@ export default function Cv() {
                                     ))}
                                 </div>
                             </div>
-                            
-                            {/* Centres d'Intérêt */}
-                            <div className=" card ">
+
+                            {/* Interests */}
+                            <div className="card">
                                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                     <Gamepad2 size={20} className="text-purple-500" />
-                                    Centres d'Intérêt
+                                    Interests
                                 </h3>
                                 <div className="flex flex-wrap gap-2">
                                     {[
-                                        { icon: Dumbbell, text: 'Sport' },
-                                        { icon: Gamepad2, text: 'Jeux vidéo' },
-                                        { icon: Book, text: 'Philosophie' },
-                                        { icon: Lightbulb, text: 'Physique' }
+                                        { icon: Dumbbell, text: 'Sports' },
+                                        { icon: Gamepad2, text: 'Video Games' },
+                                        { icon: Book, text: 'Philosophy' },
+                                        { icon: Lightbulb, text: 'Physics' }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-center gap-1.5 px-3 py-1.5 bg-purple-900/30 border border-purple-700/40 rounded-md text-xs text-gray-300 before:content-['\00a0'] after:content-['\00a0']">
                                             <item.icon size={14} />
@@ -132,10 +131,11 @@ export default function Cv() {
 
                         {/* Right Column - Education & Experience */}
                         <div className="lg:col-span-2 space-y-8">
-                            {/* Formations */}
-                            <div className=" card ">
+
+                            {/* Education */}
+                            <div className="card">
                                 <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-purple-900/50">
-                                    Formations
+                                    Education
                                 </h3>
                                 <div className="space-y-6">
                                     <div className="relative pl-6 border-l-2 border-purple-800/50">
@@ -145,9 +145,9 @@ export default function Cv() {
                                             <span className="text-xs font-semibold text-purple-400">2023 - 2026</span>
                                         </div>
                                         <div className="relative -right-[9px]">
-                                            <h4 className="font-bold text-base text-white mb-1">BUT Informatique</h4>
-                                            <p className="text-sm text-gray-400 mb-1">Conception, développement et validation d'application</p>
-                                            <p className="text-xs text-gray-500">IUT Paul-Sabatier, Toulouse (31)</p>
+                                            <h4 className="font-bold text-base text-white mb-1">Bachelor of Technology in Computer Science (BUT Informatique)</h4>
+                                            <p className="text-sm text-gray-400 mb-1">Application Design, Development and Validation</p>
+                                            <p className="text-xs text-gray-500">IUT Paul-Sabatier, Toulouse, France</p>
                                         </div>
                                     </div>
 
@@ -158,9 +158,9 @@ export default function Cv() {
                                             <span className="text-xs font-semibold text-purple-400">2022</span>
                                         </div>
                                         <div className="relative -right-[9px]">
-                                            <h4 className="font-bold text-base text-white mb-1">Baccalauréat STI2D</h4>
-                                            <p className="text-sm text-gray-400 mb-1">Option systèmes d'information - Mention "Bien"</p>
-                                            <p className="text-xs text-gray-500">Lycée Borde Basse, Castres (81)</p>
+                                            <h4 className="font-bold text-base text-white mb-1">STI2D Technological Baccalaureate</h4>
+                                            <p className="text-sm text-gray-400 mb-1">Information Systems Specialisation - Graduated with Honours</p>
+                                            <p className="text-xs text-gray-500">Lycée Borde Basse, Castres, France</p>
                                         </div>
                                     </div>
 
@@ -171,17 +171,17 @@ export default function Cv() {
                                             <span className="text-xs font-semibold text-purple-400">2013 - 2018</span>
                                         </div>
                                         <div className="relative -right-[9px]">
-                                            <h4 className="font-bold text-base text-white mb-1">Cours de Base en Musique</h4>
+                                            <h4 className="font-bold text-base text-white mb-1">Basic Music Studies</h4>
                                             <p className="text-xs text-gray-500">Academia de Música de São João da Madeira, Portugal</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            {/* Expérience et Projets */}
-                            <div className=" card ">
+
+                            {/* Experience and Projects */}
+                            <div className="card">
                                 <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-purple-900/50">
-                                    Expériences
+                                    Experience
                                 </h3>
                                 <div className="space-y-5">
                                     <div className="cv-card-small">
@@ -189,7 +189,7 @@ export default function Cv() {
                                             <Calendar size={14} className="text-purple-400" />
                                             <span className="text-xs font-semibold text-purple-400">2026</span>
                                         </div>
-                                        <h4 className="font-bold text-base text-white mb-2">Stage de fin d'études - Développement d'une application de supervision et pilotage</h4>
+                                        <h4 className="font-bold text-base text-white mb-2">Final-Year Internship - Development of a Monitoring and Control Application</h4>
                                         <p className="text-sm text-purple-300">TBI / INSA Toulouse</p>
                                     </div>
 
@@ -198,7 +198,7 @@ export default function Cv() {
                                             <Calendar size={14} className="text-purple-400" />
                                             <span className="text-xs font-semibold text-purple-400">2025</span>
                                         </div>
-                                        <h4 className="font-bold text-base text-white mb-2">Stage en Conception d'agents IA et contribution au développement d'un ERP</h4>
+                                        <h4 className="font-bold text-base text-white mb-2">Internship in AI Agent Design and Contribution to ERP Development</h4>
                                         <p className="text-sm text-purple-300">LIDR Solution</p>
                                     </div>
 
@@ -207,8 +207,8 @@ export default function Cv() {
                                             <Calendar size={14} className="text-purple-400" />
                                             <span className="text-xs font-semibold text-purple-400">2023</span>
                                         </div>
-                                        <h4 className="font-bold text-base text-white mb-2">Participation au Concours National Nuit de l'info</h4>
-                                        <p className="text-sm text-gray-400">IUT Paul-Sabatier (31)</p>
+                                        <h4 className="font-bold text-base text-white mb-2">Participation in the Nuit de l'Info National Competition</h4>
+                                        <p className="text-sm text-gray-400">IUT Paul-Sabatier, France</p>
                                     </div>
                                 </div>
                             </div>

@@ -41,13 +41,13 @@ export default function Navbar() {
                 animate="visible"
             >
                 <MotionLink toId="accueille" >
-                    Accueil
+                    Home
                 </MotionLink>
                 <MotionLink toId="projects" >
-                    Projets
+                    Projects
                 </MotionLink>
                 <MotionLink toId="competences" >
-                    Compétences
+                    Skills
                 </MotionLink>
                 <motion.a href="/contact" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-target cursor-none">
                     Contact

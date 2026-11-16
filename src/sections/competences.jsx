@@ -1,3 +1,4 @@
+
 import CompetenceCard from "../components/CardCompetence.jsx";
 import { motion } from 'framer-motion';
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
@@ -12,87 +13,87 @@ const competences = [
     {
         id: 1,
         icon: <FaLaptopCode size={50} />,
-        title: 'RÉALISER',
-        subtitle: 'Développement logiciel',
+        title: 'BUILD',
+        subtitle: 'Software Development',
         skills: [
-            'Développement d\'applications complètes',
-            'Création d\'interfaces utilisateur et logique métier',
-            'Transformation de besoins en logiciel opérationnel',
-            'Adaptation pour tout les plateformes'
+            'Development of complete applications',
+            'Creation of user interfaces and business logic',
+            'Turning requirements into functional software',
+            'Cross-platform development'
         ],
-        essence: 'Transformer une idée en produit qui fonctionne réellement.'
+        essence: 'Turning an idea into a product that actually works.'
     },
     {
         id: 2,
         icon: <MdSpeed size={50} />,
-        title: 'OPTIMISER',
-        subtitle: 'Algorithmique et performance',
+        title: 'OPTIMIZE',
+        subtitle: 'Algorithms & Performance',
         skills: [
-            'Conception et analyse d\'algorithmes',
-            'Analyse de complexité et performances',
-            'Optimisation du code',
-            'Résolution de problèmes informatiques'
+            'Algorithm design and analysis',
+            'Complexity and performance analysis',
+            'Code optimization',
+            'Solving computer science problems'
         ],
-        essence: 'Rendre une application rapide, efficace et élégante.'
+        essence: 'Making applications fast, efficient, and elegant.'
     },
     {
         id: 3,
         icon: <MdOutlineAdminPanelSettings size={50} />,
-        title: 'ADMINISTRER',
-        subtitle: 'Systèmes & DevOps',
+        title: 'ADMINISTER',
+        subtitle: 'Systems & DevOps',
         skills: [
-            'Configuration d\'environnements de développement',
-            'Déploiement d\'applications en production',
-            'Gestion de serveurs et services',
-            'Architecture réseau et infrastructure'
+            'Development environment configuration',
+            'Deploying applications to production',
+            'Server and service management',
+            'Network architecture and infrastructure'
         ],
-        essence: 'Faire vivre une application en production, pas seulement localement.'
+        essence: 'Keeping applications running in production, not just locally.'
     },
     {
         id: 4,
         icon: <LuBoxes size={50} />,
-        title: 'GÉRER',
-        subtitle: 'Back-end & données',
+        title: 'MANAGE',
+        subtitle: 'Back-end & Data',
         skills: [
-            'Bases de données SQL et NoSQL',
-            'Développement d\'API RESTful',
-            'Sécurité des applications',
-            'Optimisation et gestion des données'
+            'SQL and NoSQL databases',
+            'RESTful API development',
+            'Application security',
+            'Data management and optimization'
         ],
-        essence: 'Construire le cerveau invisible d\'une application.'
+        essence: 'Building the invisible brain behind an application.'
     },
     {
         id: 5,
         icon: <LuNewspaper size={50} />,
-        title: 'CONDUIRE',
-        subtitle: 'Produit & projet',
+        title: 'LEAD',
+        subtitle: 'Product & Project Management',
         skills: [
-            'Analyse des besoins utilisateurs',
-            'Traduction des besoins en fonctionnalités',
-            'Planification et suivi de projets',
-            'Communication avec clients et équipes'
+            'Analyzing user requirements',
+            'Translating requirements into features',
+            'Project planning and tracking',
+            'Communicating with clients and teams'
         ],
-        essence: 'Construire ce que les gens veulent vraiment.'
+        essence: 'Building what people actually need.'
     },
     {
         id: 6,
         icon: <IoPeopleOutline size={50} />,
-        title: 'COLLABORER',
-        subtitle: 'Équipe & leadership',
+        title: 'COLLABORATE',
+        subtitle: 'Teamwork & Leadership',
         skills: [
-            'Travail en équipe multi-disciplinaire',
-            'Communication technique claire',
-            'Coordination de tâches complexes',
-            'Leadership technique et mentorat'
+            'Working in multidisciplinary teams',
+            'Clear technical communication',
+            'Coordinating complex tasks',
+            'Technical leadership and mentoring'
         ],
-        essence: 'Fonctionner dans une équipe réelle, pas dans une bulle.'
+        essence: 'Working effectively in a real team, not in a bubble.'
     }
 ];
 
 
 export function CompetencesCards() {
     return (
-        <section className=" compsec w-full">
+        <section className="compsec w-full">
             <div>
 
                 {/* Header */}
@@ -102,12 +103,12 @@ export function CompetencesCards() {
                     className="mb-12 text-center"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Compétences
+                        Skills
                     </h2>
                 </motion.div>
 
-                {/* Grid de compétences - 2 colonnes pour densité optimale */}
-                <div className=" cardcompetences grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-0 max-w-7xl">
+                {/* Skills Grid - 3 columns */}
+                <div className="cardcompetences grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-0 max-w-7xl">
                     {competences.map((comp, index) => (
                         <CompetenceCard
                             key={comp.id}

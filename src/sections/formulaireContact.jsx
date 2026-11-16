@@ -55,14 +55,14 @@ export default function ContactForm() {
         
         // Definir mensagem de erro específica
         if (newErrors.email && formData.email.trim()) {
-            setErrorMessage('Format d\'email invalide.');
+            setErrorMessage('Invalid email format.');
         } else {
             const emptyFields = [];
-            if (newErrors.name) emptyFields.push('Nom');
+            if (newErrors.name) emptyFields.push('Name');
             if (newErrors.email) emptyFields.push('Email');
-            if (newErrors.subject) emptyFields.push('Sujet');
+            if (newErrors.subject) emptyFields.push('Subject');
             if (newErrors.message) emptyFields.push('Message');
-            setErrorMessage(`Veuillez remplir: ${emptyFields.join(', ')}`);
+            setErrorMessage(`Please fill out: ${emptyFields.join(', ')}`);
         }
         
         setTimeout(() => {
@@ -97,7 +97,7 @@ export default function ContactForm() {
             <div>
                 <label className="flex items-center text-white mb-2 font-medium">
                 <User className="w-4 h-4 mr-2" />
-                Nom
+                Name
                 </label>
                 <input
                 type="text"
@@ -106,7 +106,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className={`card-entry w-full cursor-target ${errors.name ? 'border-2 border-red-500' : ''}`}
-                placeholder="Votre nom"
+                placeholder="Your Name"
                 />
             </div>
 
@@ -122,14 +122,14 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className={`card-entry w-full cursor-target ${errors.email ? 'border-2 border-red-500' : ''}`}
-                placeholder="votre@email.com"
+                placeholder="Your@email.com"
                 />
             </div>
 
             <div>
                 <label className="flex items-center text-white mb-2 font-medium">
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Sujet
+                Subject
                 </label>
                 <input
                 type="text"
@@ -138,7 +138,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className={`card-entry w-full cursor-target ${errors.subject ? 'border-2 border-red-500' : ''}`}
-                placeholder="Vous voulez parler de quoi ?"
+                placeholder="What do you want to talk about ?"
                 />
             </div>
 
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 required
                 rows="5"
                 className={`card-entry w-full resize-none cursor-target ${errors.message ? 'border-2 border-red-500' : ''}`}
-                placeholder="Ecrit ton message ici..."
+                placeholder="Write your message here..."
                 />
             </div>
 
@@ -167,12 +167,12 @@ export default function ContactForm() {
                 {status === 'sending' ? (
                 <div className= "flex gap-2">
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    En train de envoyer...
+                    Sending...
                 </div>
                 ) : (
                 < div className= "flex gap-2">
                     <Send className="w-5 h-5" />
-                    Envoyer message
+                    Send Message
                 </div>
                 )}
             </button>
@@ -180,7 +180,7 @@ export default function ContactForm() {
             {status === 'success' && (
                 <div className=" messages-consola flex items-center mb-2 gap-2 text-green-300 bg-green-500/20 p-4 rounded-lg">
                 <CheckCircle className="w-5 h-5" />
-                Message envoye avec succes!
+                Message Sent!
                 </div>
             )}
 

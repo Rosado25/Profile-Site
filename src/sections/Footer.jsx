@@ -57,7 +57,7 @@ export default function Footer() {
                 {/* Bottom section */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
                     <p>
-                        © {currentYear} Alexandre Rosado. Tous droits réservés.
+                        © {currentYear} Alexandre Rosado. All rights reserved.
                     </p>
                     {/* <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors duration-300">

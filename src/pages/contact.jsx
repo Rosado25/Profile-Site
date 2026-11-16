@@ -1,30 +1,32 @@
+
 import { Mail } from "lucide-react";
 import ContactForm from "../sections/formulaireContact";
 import Time from "../components/Time";
 
 export default function ContactPage() {
   return (
-    <div className=" contact-section min-h-screen flex items-center justify-center p-4">
-      <div className=" max-w-4xl w-full">
+    <div className="contact-section min-h-screen flex items-center justify-center p-4">
+      <div className="max-w-4xl w-full">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4">
-            Me Contacter
+            Contact Me
           </h1>
           <p className="text-xl text-purple-200">
-            Vous voulez me poser une question ? N'hésitez pas à me contacter en utilisant le formulaire ci-dessous ou en m'envoyant un email directement.
+            Have a question? Feel free to get in touch using the
+            contact form below or by sending me an email directly.
           </p>
         </div>
 
-        <div className=" grid md:grid-cols-2 gap-8">
-          {/* Formulário */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Form */}
           <ContactForm />
 
           {/* Info Card */}
           <div className="space-y-6">
             <div className="card">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Informations de Contact
+                Contact Information
               </h3>
               <div className="space-y-4 text-purple-200">
                 <div className="flex items-start gap-3">
@@ -39,18 +41,18 @@ export default function ContactPage() {
 
             <div className="card">
               <h3 className="text-xl font-bold text-white mb-3">
-                Temps de Réponse
+                Response Time
               </h3>
               <p className="text-purple-200">
-                Normalement je réponds aux emails sous 24 à 48 heures.
+                I usually respond to emails within 24 to 48 hours.
               </p>
               <p className="text-purple-300 text-sm mt-2">
-                Heure locale où j´habite: <Time />
+                My local time: <Time />
               </p>
             </div>
           </div>
-          </div>
         </div>
       </div>
+    </div>
   );
 }

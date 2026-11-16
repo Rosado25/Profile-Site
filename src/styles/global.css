@@ -366,6 +366,10 @@ footer:hover {
     height: 55%;
     margin-left: auto;
     margin-right: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .card-proj {
@@ -618,11 +622,6 @@ a:hover {
     .tech-icon-hitareas { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 }
 
-/* Em ecrãs muito grandes de secretária ampliamos a largura REAL do
-   conteúdo (não com transform:scale). O scale(1.2) que existia aqui
-   alargava visualmente os cards para além da própria secção — como a
-   secção tem overflow:hidden, isso cortava ícones e texto nas laterais
-   em muitos portáteis (1440x900, 1536x864, etc.). */
 @media (min-width: 1800px) {
     .dotgrid-content {
         width: min(1600px, calc(100% - 6rem));
@@ -658,6 +657,92 @@ a:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Portáteis 14" e 15" */
+@media (min-width: 769px) and (max-width: 1440px) {
+
+    .dotgrid-section {
+        padding: clamp(6rem, 10vh, 8rem) 2rem 2rem;
+        min-height: auto;
+    }
+
+    .dotgrid-content {
+        width: min(1200px, calc(100% - 2rem));
+        gap: clamp(1.5rem, 3vw, 3rem);
+        align-items: center;
+    }
+
+    .dotgrid-content > :first-child {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    /* Cards */
+    .pc-card {
+        height: min(65svh, 540px);
+        max-height: 540px;
+    }
+
+    .introduction-welcome {
+        height: min(65svh, 540px);
+        margin-bottom: 0;
+    }
+
+    .introduction-profile,
+    .introduction-profile .pc-card-wrapper,
+    .introduction-profile .pc-card-shell {
+        height: min(65svh, 540px);
+    }
+
+    /* Conteúdo de apresentação */
+    .introduction-welcome > div {
+        transform: none;
+    }
+
+    .welcome-title {
+        margin-left: clamp(1rem, 2vw, 2rem);
+    }
+
+    .tech-icon-row {
+        transform: none;
+    }
+
+    .tech-icon-hitareas {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+}
+
+/* Portáteis com pouca altura: 768p e semelhantes */
+@media (min-width: 769px) and (max-width: 1440px)
+       and (max-height: 800px) {
+
+    .dotgrid-section {
+        padding-top: 6rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .pc-card {
+        height: min(60svh, 460px);
+        max-height: 460px;
+    }
+
+    .introduction-welcome {
+        height: min(60svh, 460px);
+    }
+
+    .introduction-profile,
+    .introduction-profile .pc-card-wrapper,
+    .introduction-profile .pc-card-shell {
+        height: min(60svh, 460px);
+    }
+
+    .dotgrid-content {
+        gap: 1.5rem;
+    }
+}
+
 
 /* Scrollbar personalizado */
 ::-webkit-scrollbar {

@@ -46,7 +46,7 @@ export function CardWelcome() {
                             whileHover={{ x: 10 }}
                             transition={{ type: "spring", stiffness: 300 }}
                         >
-                            Full-Stack Développeur
+                            Full-Stack Developer
                         </motion.span>
                         <br />
                         <div className="flex flex-col items-center gap-4">
@@ -85,12 +85,13 @@ export function CardWelcome() {
                     variants={itemVariants}
                     className="mt-auto mb-0 grid grid-cols-2 md:grid-cols-4 gap-6"
                 >
+                    
                     <motion.div
                         className="text-center"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="text-3xl md:text-4xl font-bold block text-white">BAC +3</div>
-                        <div className="text-sm text-gray-400 mt-1">Années d'études</div>
+                        <div className="text-3xl md:text-4xl font-bold block text-white">3-Years</div>
+                        <div className="text-sm text-gray-400 mt-1">Years of Education</div>
                     </motion.div>
 
                     <motion.div
@@ -98,24 +99,25 @@ export function CardWelcome() {
                         whileHover={{ y: -5 }}
                     >
                         <div className="text-3xl md:text-4xl font-bold block text-white">7+</div>
-                        <div className="text-sm text-gray-400 mt-1">Projets réalisés</div>
+                        <div className="text-sm text-gray-400 mt-1">Completed Projects</div>
                     </motion.div>
 
                     <motion.div
                         className="text-center"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="text-3xl md:text-4xl font-bold block text-white">30+</div>
-                        <div className="text-sm text-gray-400 mt-1">Technologies maitrises</div>
+                        <div className="text-3xl md:text-4xl font-bold block text-white">20+</div>
+                        <div className="text-sm text-gray-400 mt-1">Technologies Mastered</div>
                     </motion.div>
 
                     <motion.div
                         className="text-center"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="text-3xl md:text-4xl font-bold block text-white">3+</div>
-                        <div className="text-sm text-gray-400 mt-1">Années de pratique</div>
+                        <div className="text-3xl md:text-4xl font-bold block text-white">4+</div>
+                        <div className="text-sm text-gray-400 mt-1">Years of Practice</div>
                     </motion.div>
+
                 </motion.div>
 
                 {/* Descrição */}
@@ -153,8 +155,8 @@ export function CardMe() {
                 name="Alexandre Rosado"
                 title=""
                 handle="Rosado25"
-                status="Recherche d'emploi"
-                contactText="Contact Moi"
+                status="Searching for a job"
+                contactText="Contact Me"
                 avatarUrl="/alex.webp"
                 grainUrl="/grain.webp"
                 iconUrl="/iconpattern.webp"
