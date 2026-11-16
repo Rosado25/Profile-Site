@@ -744,6 +744,50 @@ a:hover {
 }
 
 
+/* Correção visual para escalas elevadas (aprox. 125%) */
+@media (min-resolution: 1.2dppx) and (max-resolution: 1.3dppx) {
+
+    .dotgrid-section {
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+
+    .dotgrid-content {
+        width: min(1200px, calc(100% - 3rem));
+        gap: 2rem;
+    }
+
+    .pc-card {
+        height: min(62svh, 480px);
+        max-height: 480px;
+    }
+
+    .introduction-welcome {
+        height: min(62svh, 480px);
+        margin-bottom: 0;
+    }
+
+    .introduction-profile,
+    .introduction-profile .pc-card-wrapper,
+    .introduction-profile .pc-card-shell {
+        height: min(62svh, 480px);
+    }
+
+    .introduction-welcome > div {
+        transform: none;
+    }
+
+    .welcome-title {
+        margin-left: 1rem;
+    }
+
+    .tech-icon-row {
+        transform: none;
+    }
+}
+
+
+
 /* Scrollbar personalizado */
 ::-webkit-scrollbar {
     width: 8px;
