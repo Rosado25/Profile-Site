@@ -3,7 +3,8 @@
 This project is a personal portfolio built using React and Vite. It showcases various projects and skills, providing a modern and responsive design.
 
 ## Live Demo
-🌐 **Visit the site:** (https://alexandrerosado.com)
+**ATTENTION** - Still work in progress, might have bugs
+- 🌐 **Visit the site:** (https://alexandrerosado.com)
 
 ## Features
 - **React**: A JavaScript library for building user interfaces.
