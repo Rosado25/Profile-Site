@@ -20,22 +20,14 @@ const myCards = [
     },
     {
         id: 3,
-        image: 'logoGes.png',
-        title: 'Sport team management',
-        description: 'Site with a personal API',
-        link: 'https://github.com/Rosado25/GestionEquipeSport-Interface',
-        tags: ['Web', 'Pair']
+        image: 'logosave.webp',
+        title: 'SaveApp2p',
+        description: 'App to send files between two devices with p2p',
+        link: 'https://github.com/Rosado25/SaveApp2p',
+        tags: ['Go', 'Personal']
     },
     {
         id: 4,
-        image: 'Logo_Echoo.png',
-        title: 'Echoo Messaging',
-        description: 'Site with Ajax',
-        link: 'https://github.com/ElAbdos/Echoo_Messagerie-2024--2025-',
-        tags: ['Web', 'Trinomial']
-    },
-    {
-        id: 5,
         image: 'blumbat.png',
         title: 'BlumBat',
         description: 'Property management app',
@@ -43,28 +35,36 @@ const myCards = [
         tags: ['Java', 'Team']
     },
     {
+        id: 5,
+        image: 'logoGes.png',
+        title: 'Sports Team Management',
+        description: 'Site with a personal API to manage a sports team',
+        link: 'https://github.com/Rosado25/GestionEquipeSport-Interface',
+        tags: ['Web', 'Pair']
+    },
+    {
         id: 6,
+        image: 'Logo_Echoo.png',
+        title: 'Echoo Messaging',
+        description: 'Site with Ajax to send messages in real time',
+        link: 'https://github.com/ElAbdos/Echoo_Messagerie-2024--2025-',
+        tags: ['Web', 'Trinomial']
+    },
+    {
+        id: 7,
         image: 'C_Logo.png',
         title: 'IP Validator',
-        description: 'Network Validator',
+        description: 'Network Validator in C',
         link: 'https://github.com/Rosado25/Validateur-d-Adresse-IP',
         tags: ['C', 'Pair']
     },
     {
-        id: 7,
+        id: 8,
         image: 'Python_logo.png',
         title: 'Recommendation',
-        description: 'Recommendation systems',
+        description: 'Recommendation systems in Python',
         link: 'https://github.com/ElAbdos/systeme-de-recommandation',
         tags: ['Python', 'Pair']
-    },
-    {
-        id: 8,
-        image: 'logosave.webp',
-        title: 'SaveApp2p',
-        description: 'Project to send files',
-        link: 'https://github.com/Rosado25/SaveApp2p',
-        tags: ['Go', 'Personal']
     }
 ];
 
